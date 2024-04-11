@@ -4,16 +4,17 @@
     box-sizing: border-box;
 }
 body{
-    width: 100%;
+    
     background-color: black;
     display: flex;
     flex-direction: column;
+    font-family: 'Roboto Slab', serif;
 }
 .contenedor_logo{
     text-align: center;
-    /* border: 1px  #fbd334  solid; */
-    width: 100%;
-
+    /* border: 1px  #fbd334  solid;  */
+    max-width: 35em;
+    margin: auto;
 
 }
 img{
@@ -28,11 +29,32 @@ img{
     justify-content: center;
 }
 a{
-    color: #db3323;
+    color: black;
+    font-size: 1.5em;
+    background-color: #db3323; 
+    border-radius: 10px; 
+    text-decoration: none; 
+    transition: background-color 0.3s, color 0.3s; 
+    padding: 5px 10px; 
+}
+
+a:hover {
+    background-color: #fbd334; 
+    color: black; 
+    text-decoration: underline; 
 }
 .dialogo{
     
     color:  #fbd334 ;
     border-radius: 30%;
     padding: 10px;
+}
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+@media screen and (min-width:45em){
+    a{
+        font-size: 160%;
+       
+    }
 }
