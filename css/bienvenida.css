@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+.contenedor_logo{
+    text-align: center;
+    /* border: 1px  #fbd334  solid; */
+    width: 100%;
+
+
+}
+img{
+    max-width: 100%;
+}
+
+.presentacion{
+    margin-top:1em ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+a{
+    color: #db3323;
+}
+.dialogo{
+    
+    color:  #fbd334 ;
+    border-radius: 30%;
+    padding: 10px;
+}
