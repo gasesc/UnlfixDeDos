@@ -6,42 +6,50 @@
 body{
     width: 100%;
     height: 100vh;
+    background-color: #260028; 
 }
 
 header{
     display: flex;
     height: 90px;
-    background-color: black;
+    background-color: #48004c;
 }
 header div{
     width: 50%;
     height: 100%;
 }
 .contenedor_logo {
-    background-color: white;
+    background-color: #fcc8ff;
     max-width: 30%;
     height: 100%;
     display: flex;
     align-items: center; /* Para centrar verticalmente la imagen */
 }
-
+.contenedor_perfil {
+    background-color: #fcc8ff;
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center; /* Para centrar verticalmente la imagen */
+}
 .contenedor_logo img {
     max-height: 100%; /* Para que la imagen no exceda la altura del contenedor */
     width: auto; /* Para mantener la relación de aspecto */
     max-width: 100%; /* Para que la imagen no exceda el ancho del contenedor */
 }
 h3{
-    color: white;
+    color: #260028;
 }
 
 .icono{
     color: rebeccapurple;
 }
+
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 @media screen and (min-width:45em){
    .contenedor_logo{
-    background-color: aqua;
-    max-width: 15%;
+    background-color: #fcc8ff;
+    max-width: 60%;
    }
 }
