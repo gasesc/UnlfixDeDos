@@ -10,12 +10,13 @@ body{
 }
 
 header{
+    position: sticky;
     display: flex;
     height: 90px;
     background-color: #48004c;
 }
-header div{
-    width: 50%;
+header section{
+    width: 10%;
     height: 100%;
 }
 .contenedor_logo {
@@ -27,17 +28,23 @@ header div{
 }
 .contenedor_perfil {
     background-color: #fcc8ff;
-    max-width: 100%;
+    max-width: 30%;
     height: 100%;
     display: flex;
-    align-items: center; /* Para centrar verticalmente la imagen */
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: auto;
 }
 .contenedor_logo img {
     max-height: 100%; /* Para que la imagen no exceda la altura del contenedor */
     width: auto; /* Para mantener la relación de aspecto */
     max-width: 100%; /* Para que la imagen no exceda el ancho del contenedor */
 }
-h3{
+span{
+    font:100;
+    font: bold;
+    font-family: Arial, san-serif;
     color: #260028;
 }
 
