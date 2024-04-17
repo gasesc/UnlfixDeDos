@@ -73,15 +73,17 @@ input{
     padding: 5px;
 }
 .enviar{
+    color: black;
     margin-top: 10px;
     padding: 7px;
     background-color: #db3323;
-    border: #db3323;
+    border: 1px solid #ccc;
     padding: 5px 10px;
     border-radius: 10px;
     font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s; 
+    box-shadow: 0px 2px 4px rgba(230, 226, 226, 0.1)
 }
 .enviar:hover {
     background-color: #fbd334; 
