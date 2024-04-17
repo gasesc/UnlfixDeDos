@@ -69,7 +69,36 @@ label{
     flex-direction: column;
     align-items: center;
 }
-
+input{
+    padding: 5px;
+}
+.enviar{
+    margin-top: 10px;
+    padding: 7px;
+    background-color: #db3323;
+    border: #db3323;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; 
+}
+.enviar:hover {
+    background-color: #fbd334; 
+    color: black; 
+    text-decoration: underline; 
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.enlaces a{
+    color:#fbd334;
+    font-size: 1.1em;
+}
+.enlaces a:hover{
+    font-weight: bold;
+    transition:  font-weigh 0.3s; 
+    
+}
 
 
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
