@@ -1,0 +1,13 @@
+body {
+    background-image: url("../img/pxfuel%20(15).jpg");
+    background-size: cover;
+     display: flex; 
+    /* flex-direction: column; */
+    font-family: 'Roboto Slab', serif;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+   
+    
+}
