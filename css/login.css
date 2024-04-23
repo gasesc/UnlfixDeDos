@@ -11,8 +11,12 @@
 } */
 
 body {
-    background-image: url("../img/pxfuel\ \(15\).jpg");
-    background-size: cover;
+    background-image: url("../img/abstract-black-background-with-polygonal-shapes.jpg");
+    background-color: #2c0c1a;
+    background-blend-mode: overlay;
+    background-size:cover;
+
+    background-position: center;
      display: flex; 
     /* flex-direction: column; */
     font-family: 'Roboto Slab', serif;
@@ -25,7 +29,9 @@ body {
 }
 
 .contendor_general{
+    background-image: url("../img/9.jpg");
     background-color: #260028;
+    background-blend-mode: overlay;
     border-radius: 10px; 
     max-width: 35em;
     box-shadow: 0 0 20px rgba(39, 7, 54, 0.9);
