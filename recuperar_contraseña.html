@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
-   
+        <meta charset="UTF-8">
+        <meta name="viewport" content="device-width">
+        <link rel="stylesheet" href="css/recuperar_contraseña.css"/>
         <title>Document</title>
+
     </head>
     <body>
-    
-        <section>
+        
+        <section class="seccion">
+            
         <form>
     
-       <h1>Olvidaste tu contraseña?</h1>
+       <h1>¿Olvidaste tu contraseña?</h1>
         <p>Introduce tu email para que se envien las instrucciones sobre como reestablecer tu contraseña</p>
     
-        <label for="email" >Ingresa tu Email</label>
+        <label for="email" id="mail_usuario">Email:</label>
         <br>
         <input type="email" name="miemail" id="miemail"> 
         <br><br>
-        <input type="button" value="Enviar correo electronico">
+        <button id="miboton">Enviar correo electronico</button>
     </form>
         
     </section>

@@ -1,0 +1,54 @@
+body{
+
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
+
+
+}
+
+.seccion{
+    
+    margin: auto;
+    color: purple;
+    background-size: auto;
+    background-color: rgb(221, 179, 255);
+    border: 2px solid black;
+    box-shadow: 0 0 20px black;
+}
+
+h1{
+
+color: purple;
+font-size: x-large;
+
+
+}
+
+p{
+
+font-size: large;
+
+
+}
+
+
+#miboton{
+
+    color: rgb(255, 255, 255);
+    background-color: purple;
+    
+    
+
+}
+
+#mail_usuario{
+    text-align: right;
+    font-size: smaller;
+
+}
+
+#miemail{
+
+font-size: smaller;
+
+}
