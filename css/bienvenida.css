@@ -4,15 +4,20 @@
     box-sizing: border-box;
 }
 
-/* @keyframes cambioDeFondo {
-    0% { background-color: black; }
-    50% { background-image: url("../img/pxfuel\ \(15\).jpg"); }
-    100% { background-color: black; }
-} */
+@keyframes cambioDeFondo {
+    0%  { background-color: #260028; }
+    25% { background-color: #340636; }
+    50% { background-color: #360b26; }
+    75% { background-color: #340636; }
+    100%{ background-color: #260028; }
+} 
 
 body {
-    background-image: url("../img/pxfuel\ \(15\).jpg");
-    background-size: cover;
+    animation: cambioDeFondo 4s infinite;
+    background-image: url("../img/abstract-black-background-with-polygonal-shapes.jpg");
+    /* background-color: #260028; */
+    background-blend-mode: overlay;
+    background-size:cover;
      display: flex; 
     /* flex-direction: column; */
     font-family: 'Roboto Slab', serif;
@@ -25,10 +30,13 @@ body {
 }
 
 .contendor_general{
-    background-color: rgba(0, 0, 0, 0.9);
+    animation: cambioDeFondo 4s infinite;
+    background-image: url("../img/9.jpg");
+    background-color: #260028;
+    background-blend-mode: overlay;
     border-radius: 10px; 
     max-width: 35em;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); 
+    box-shadow: 0 0 20px rgba(39, 7, 54, 0.9);
 }
 
 .contenedor_logo{
@@ -52,9 +60,10 @@ img{
     padding: 5px;
 }
 a{
-    color: black;
+    background-color: #aa2467; /* Amarillo */
+    color: white;
     font-size: 1.5em;
-    background-color: #db3323; 
+    border: 1px solid #ccc;
     border-radius: 10px; 
     text-decoration: none; 
     transition: background-color 0.3s, color 0.3s; 
@@ -62,16 +71,18 @@ a{
 }
 
 a:hover {
-    background-color: #fbd334; 
-    color: black; 
+    background-color: black; 
+    color: #fbc8fb ; 
     text-decoration: underline; 
+    
 }
 .dialogo{
     
-    color:  #fbd334 ;
+    color:  #fbc8fb  ;
     border-radius: 30%;
     padding: 10px;
 }
+
 
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 

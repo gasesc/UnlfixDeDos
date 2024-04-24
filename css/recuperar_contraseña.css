@@ -1,54 +1,75 @@
-body{
-
-text-align: center;
-font-family: Arial, Helvetica, sans-serif;
-
-
-}
-
-.seccion{
+body {
+    background-image: url("../img/pxfuel%20(15).jpg");
+    background-size: cover;
+     display: flex; 
+    /* flex-direction: column; */
+    font-family: 'Roboto Slab', serif;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+   
     
-    margin: auto;
-    color: purple;
-    background-size: auto;
-    background-color: rgb(221, 179, 255);
-    border: 2px solid black;
-    box-shadow: 0 0 20px black;
 }
-
-h1{
-
-color: purple;
-font-size: x-large;
-
-
+.contendor_general{
+    background-color: #260028;
+    border-radius: 15px; 
+    max-width: 50em;
+    box-shadow: 0 0 20px rgba(39, 7, 54, 0.9);
 }
-
-p{
-
-font-size: large;
-
-
-}
-
-
-#miboton{
-
-    color: rgb(255, 255, 255);
-    background-color: purple;
+.contenedor_logo{
     
+    text-align: center;
+
+   
+
+}
+img{
+    max-width: 100%;
+}
+
+.presentacion{
     
-
+    /* max-width: 35em; */
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
 }
-
-#mail_usuario{
-    text-align: right;
-    font-size: smaller;
-
+.formulario_recuperar_contrasenia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
-
-#miemail{
-
-font-size: smaller;
-
+label{
+    color: #fbc8fb ;
+}
+input{
+    padding: 5px;
+}
+.enviar{
+    background-color: #aa2467; /* Amarillo */
+    color: white; /* Color de texto que contrasta */
+    margin-top: 10px;
+    padding: 7px;
+    
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; 
+    box-shadow: 0px 2px 4px rgba(230, 226, 226, 0.1)
+}
+.enlaces a{
+    color:#fbc8fb ;
+    font-size: 1.1em;
+}
+.enlaces a:hover{
+    font-weight: bold;
+    transition:  font-weigh 0.3s; 
+    
 }

@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="device-width">
-        <link rel="stylesheet" href="css/recuperar_contraseña.css"/>
-        <title>Document</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/recuperar_contraseña.css">
+        <title>UNFLIX | Recuperar Contraseña</title>
     </head>
     <body>
-        
-        <section class="seccion">
-            
-        <form>
-    
-       <h1>¿Olvidaste tu contraseña?</h1>
-        <p>Introduce tu email para que se envien las instrucciones sobre como reestablecer tu contraseña</p>
-    
-        <label for="email" id="mail_usuario">Email:</label>
-        <br>
-        <input type="email" name="miemail" id="miemail"> 
-        <br><br>
-        <button id="miboton">Enviar correo electronico</button>
-    </form>
-        
-    </section>
-    
+        <div class="contendor_general">
+        <div class= "contenedor_logo"><img src="img/logo sin fondo recortado.png"alt=""></div>
+        <div class="presentacion">
+            <form action="#" method="post" class="formulario_recuperar_contrasenia">
+                <label for = "email"> Ingrese su email para restablecer la contrasenia </label>
+                <input id="email" type="text" name="email" placeholder="Ingrese su email">
+
+                <input type="submit" class="enviar">
+            </form>
+            <div>
+            <div class="enlaces">
+                <a href=""> Iniciar Sesion </a>
+                <a href=""> Registrarse </a>
+            </div>
+</div>
+</div>
     </body>
 </html>

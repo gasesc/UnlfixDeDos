@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #260028; 
+}
+
+header {
+    display: flex;
+    height: 90px;
+    background-color: #080008;
+}
+
+.contenedor_logo {
+    
+    display: flex;
+    width: 10%;
+    align-items: center;
+    justify-content: center;
+    border: 2px #fcc8ff solid ;
+}
+nav{
+    width: 70%;
+}
+
+nav ul {
+ 
+    display: flex;
+    list-style: none;
+    flex: 4; /* Ajusta según la necesidad de espacio */
+    align-items: flex-start;
+    border: 2px #fcc8ff solid ;
+    height: 100%;
+}
+
+.contenedor_nav {
+    flex: 1;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    border: 2px #32a83c solid ;
+}
+
+.contenedor_perfil {
+    width: 20%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fcc8ff;
+}
+
+.contenedor_logo img {
+    max-height: 100%;
+    width: auto;
+    max-width: 100%;
+}
+
+.contenedor_perfil span, .contenedor_nav span {
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    color: #260028;
+}
+
+.contenedor_nav span {
+    color: rgb(252, 200, 255);
+}
+
+/* Ajustes adicionales para el responsive y otros estilos específicos */
+
+@media screen and (min-width: 45em) {
+    .contenedor_logo {
+        max-width: 20%;
+    }
+    nav ul {
+        max-width: 60%;
+    }
+    .contenedor_perfil {
+        max-width: 20%;
+    }
+}
