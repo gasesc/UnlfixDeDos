@@ -1,6 +1,8 @@
 body {
-    background-image: url("../img/pxfuel%20(15).jpg");
+    background-image: url("../img/abstract-black-background-with-polygonal-shapes.jpg");
     background-size: cover;
+    background-color: #260028;
+    background-blend-mode: overlay;
      display: flex; 
     /* flex-direction: column; */
     font-family: 'Roboto Slab', serif;
@@ -8,6 +10,7 @@ body {
     align-items: center;
     width: 100%;
     height: 100vh;
+    margin: 0;
    
     
 }
@@ -38,6 +41,14 @@ img{
     justify-content: center;
     padding: 5px;
 }
+
+#correo{
+
+    font-size: large;
+
+
+}
+
 .formulario_recuperar_contrasenia{
     display: flex;
     flex-direction: column;
@@ -47,7 +58,8 @@ img{
 label{
     color: #fbc8fb ;
 }
-input{
+.presentacion #email{
+    width: 300px;
     padding: 5px;
 }
 .enviar{
@@ -64,9 +76,18 @@ input{
     transition: background-color 0.3s, color 0.3s; 
     box-shadow: 0px 2px 4px rgba(230, 226, 226, 0.1)
 }
+.enlaces{
+    
+    padding:10px ;
+
+
+}
+
 .enlaces a{
     color:#fbc8fb ;
     font-size: 1.1em;
+    text-decoration: none;
+    font-family: serif;
 }
 .enlaces a:hover{
     font-weight: bold;
