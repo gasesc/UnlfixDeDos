@@ -6,9 +6,10 @@
 body {
     width: 100%;
     height: 100vh;
-    background-image: url("../img/abstract-black-background-with-polygonal-shapes.jpg");
-     background-color: #260028; 
-    background-blend-mode: overlay;
+    background-image: url("../img/john\ wick\ 4.jpg");
+    background-size: cover;
+     /* background-color: #260028; 
+    background-blend-mode: overlay; */
 }
 
 header {
@@ -81,6 +82,49 @@ nav ul {
 }
 .contenedor_nav span {
     color: rgb(252, 200, 255);
+}
+/* ******************************************************* */
+main{
+    width: 90%;
+    margin: auto;
+}
+.contenedor_general{
+    margin-top: 40px;
+    width: 50%;
+    display: flex;
+    justify-content: left;
+    /* border: 2px #260028 solid; */
+    
+}
+.datos_trailer{
+    width: 60%;
+    /* border: 2px #260028 solid; */
+}
+.contenedor_video{
+    border-radius: 5px; /* Agrega bordes redondeados al contenedor del video */
+    overflow: hidden;
+}
+.datos_trailer iframe{
+    width: 100%;
+ 
+}
+h1{
+    color: #F2BE22;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra con desplazamiento x de 2px, desplazamiento y de 2px y un desenfoque de 4px */
+    font-size: 32px;
+}
+p {
+    margin-top: 9px;
+    color: #333; /* Color de texto oscuro para contraste */
+    font-size: 18px; /* Tamaño de fuente legible */
+    font-family: Arial, sans-serif; /* Familia de fuentes legible */
+    line-height: 1.5; /* Espaciado entre líneas para una mejor legibilidad */
+    padding: 10px; /* Espaciado interior para separar el texto del borde del contenedor */
+    border-radius: 5px; /* Bordes redondeados para un aspecto más suave */
+     /* Fondo semi-transparente para suavizar el contraste */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
 }
 
 /* Ajustes adicionales para el responsive y otros estilos específicos */
