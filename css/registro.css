@@ -1,79 +1,93 @@
-body{
-    align-items: center;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url("../img/abstract-black-background-with-polygonal-shapes.jpg");
+  background-size: contain;
+  background-blend-mode: overlay;
+  background-color: #260028;
+}
+
+.contenedor_general {
+  background-color: #260028;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(39, 7, 0, 0.9);
+  color: white;
+}
+
+.contenedor_logo {
+  text-align: center;
+}
+
+img {
+  width: 300px;
+}
+
+.presentacion {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+  padding: 10px;
+}
+.presentacion form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+  padding: 15px;
+}
+.presentacion form label {
+  text-align: left;
+}
+
+.presentacion form input {
+  width: 100%;
+  padding: 5px;
+  margin: auto;
+}
+
+.presentacion form .boton {
+  margin-top: 10px;
+  width: 50%;
+  cursor: pointer;
+  background-color: #aa2467;
+  color: white;
+}
+
+.presentacion form #boton_cancelar {
+  background-color: rgb(110, 0, 0);
+  color: white;
+}
+
+@media (min-width: 1024px) {
+  .contenedor_general {
+    flex-direction: row;
+    width: 80%;
+    margin: 50px auto;
     justify-content: center;
-    margin: 0;
-    background-image: url("../img/abstract-black-background-with-polygonal-shapes.jpg");
-    background-size: cover;
-    background-blend-mode: overlay;
-    background-color: #260028;
-}
-
-.contenedor_general{
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background-color: #260028;
-    padding: 20px;
-  
+    align-items: center;
+  }
+  .contenedor_general .presentacion {
+    width: calc(75% - 10px);
+  }
+  .contenedor_general .contenedor_logo {
+    width: calc(25% - 10px);
+  }
+  .contenedor_general .presentacion form {
     display: flex;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(39,7,0,0.9);
-    color: white;
-
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .contenedor_general .presentacion form .formulario_principal,
+  .metodos_de_pago {
+    width: calc(50% - 10px);
+  }
+  .contenedor_general .presentacion form .botones {
+    width: 100%;
+  }
+  
 }
-
-.contenedor_logo{
-
-text-align: center;
-
-
-}
-
-img{
-    
-    width: 300px;
-
-}
-
-.presentacion{
-
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
-}
-
-.presentacion label{
-
- display:flex;
-
-
-}
-
-.presentacion input{
-    
-    width: 90%;
-    border-radius: 7px;
-
-
-}
-
-.presentacion .boton{
-
-   
-    margin-top:10px ;
-    width: 50%;
-    cursor: pointer;
-    background-color: #aa2467; 
-    color: white;
-
-}
-
-.presentacion #boton_cancelar{
-
-    background-color: rgb(110, 0, 0);
-    color: white;
-
-}
-
-
