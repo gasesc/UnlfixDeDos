@@ -8,47 +8,77 @@
     <title>UNFLIX | Inicio</title>
 </head>
 <body>
+  <div class="container">
     <header>
-      <section>
-        <article class="contenedor_logo">
-          <img src="img/UNFLIX_Unlam.png" alt="Logo">
-        </article>
-      </section>
-
-      <section>
-        <article class="contenedor_inicio">
-          <i class="fa-sharp fa-solid fa-house" style="color: #fcc8ff;"></i>
-          <span>Inicio</span>
-        </article>
-      </section>
-      
-        <section>
-          <article class="contenedor_inicio">
-            <i class="fa-sharp fa-solid fa-film" style="color: #fcc8ff;"></i>
-            <span>Peliculas</span>
-          </article>
-        </section>
-
-        <section>
-          <article class="contenedor_inicio">
-            <i class="fa-solid fa-tv" style="color: #fcc8ff;"></i>
-            <span>Series</span>
-          </article>
-        </section>
-
-        <section>
-          <article class="contenedor_inicio">
-            <i class="fa-solid fa-magnifying-glass" style="color: #fcc8ff;"></i>
-            <span>Buscar</span>
-          </article>
-        </section>
-
-        <section>
-        <article class="contenedor_perfil">
-            <span>Mi Perfil</span>
-            <i class="fa-solid fa-circle-user" style="color: #260028;"></i>
-        </article>
-      </section>
+      <div class="header-options">         
+        <div class="main-logo">
+          <img src="./img/logo horizontal.png" width="150px" />
+        </div>
+        <div class="user-options">
+          <a href="./login.html" title="Cerrar Sesion">
+            <span class="fontBar">Cerrar Sesion</span>
+            <span class="logoBar"><i class="fa-solid fa-circle-user" style="color:  #fcc8ff;"></i></span>
+          </a>
+        </div> 
+      </div>
+      <div class="navbar-container">
+        <nav class="navbar">
+          <ul>
+            <li> 
+              <a href="pantalla_principal.html" title="Inicio">
+                <span class="logoBar"><i class="fa-sharp fa-solid fa-house" style="color: #fcc8ff;"></i></span>
+                <span class="fontBar">Inicio</span>
+              </a>
+            </li>
+            <li>
+              <a href="/" title="Series">
+                <span class="logoBar"><i class="fa-solid fa-tv" style="color: #fcc8ff;"></i></span>
+                <span class="fontBar">Series</span>
+              </a>
+            </li>
+            <li>
+              <a href="/" title="Peliculas">
+                <span class="logoBar"><i class="fa-sharp fa-solid fa-film" style="color: #fcc8ff;"></i></span>
+                <span class="fontBar">Peliculas</span>
+              </a>
+            </li>
+            <li>
+              <a href="/" title="Buscar">
+                <span class="logoBar"><i class="fa-solid fa-magnifying-glass" style="color: #fcc8ff;"></i></span>
+                <span class="fontBar">Buscar</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
+
+    
+    <div class="texto-peliculas">
+      <span class="fontBar">Peliculas</span>
+    </div>
+
+    <div class="grid-peliculas">      
+      <div class="box"><img src="./img/PeliYSeries/capamer.webp"/></div>
+      <div class="box"><img src="./img/PeliYSeries/capamer2.webp"/></div>
+      <div class="box"><img src="./img/PeliYSeries/capmarvel.webp"/></div>
+      <div class="box"><img src="./img/PeliYSeries/civilwar.webp"/></div>
+      <div class="box"><img src="./img/PeliYSeries/deadpool.webp"/></div>
+      <div class="box"><img src="./img/PeliYSeries/strange.webp"/></div>      
+    </div>
+
+    <div class="texto-series">
+      <span class="fontBar">Series</span>
+    </div>
+
+    <div class="grid-series">
+      <div class="box">A</div>
+      <div class="box">A</div>
+      <div class="box">A</div>
+      <div class="box">A</div>
+      <div class="box">A</div>
+      <div class="box">A</div>
+    </div>
+  </div>
 </body>
 </html>
