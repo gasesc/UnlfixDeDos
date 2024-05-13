@@ -83,7 +83,13 @@ header .header-options {
 .user-options i:hover {
     color: #fef0ff;
 }
-
+.fontPage{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    font-size: 2rem;
+    color: #fcc8ff;
+}
 .contenedor_logo {
     max-width: 30%;
     height: 100%;
@@ -144,8 +150,9 @@ header .header-options {
     color: #fef0ff;
     border-radius: 5px;
     padding: 5px 5px;
-    font-size: 150%;
+    font-size: 0%;
 }
+
 .box:hover{
     background-color: #fef0ff;
     color: #fcc8ff;
@@ -195,8 +202,38 @@ header .header-options {
         display: flex;
         justify-content: center;
         font-size: 1rem;
-}
+    }
     .fontBar{
         display: none;
+    }
+    .texto-peliculas{
+        margin-top: 90px;
+        padding: 20px;
+        text-align: left;
+        font-size: 1.5rem;
+        color: #fef0ff;
+    }
+    .texto-series{
+        margin-top: 10px;
+        padding: 20px;
+        text-align: left;
+        font-size: 1.5rem;
+        color: #fef0ff;
+    }
+    .grid-peliculas, .grid-series{
+        padding: 10px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        color: #fef0ff;
+    }
+    .fontPage{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        font-size: 1.5rem;
+        color: #fcc8ff;
+        background-color: #260028;
     }
 }
