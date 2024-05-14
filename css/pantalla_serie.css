@@ -198,7 +198,7 @@ p {
     line-height: 1.5; /* Espaciado entre líneas para una mejor legibilidad */
     padding: 10px; /* Espaciado interior para separar el texto del borde del contenedor */
     border-radius: 5px; /* Bordes redondeados para un aspecto más suave */
-    background-color: rgba(255, 255, 255, 0.6);  /* Fondo semi-transparente para suavizar el contraste */
+    background-color: rgba(255, 255, 255, 0.8);  /* Fondo semi-transparente para suavizar el contraste */
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
 }
 .contenedor_video{
@@ -236,6 +236,21 @@ p {
     background-color: #641a68; /* Cambia el color de fondo al pasar el cursor */
     color: #fff; /* Cambia el color del texto al pasar el cursor */
     transform: scale(1.05);
+}
+form{
+    margin-top: 9px;
+}
+select{
+    width:fit-content;
+    font-size: 15px;
+    padding: 5px;
+    background-color: #260028;
+    border-radius: 4px;
+    color: #fcc8ff;
+}
+option{
+    font-size: 14px;
+    color: white;
 }
 
 .descripcion_pelicula{
