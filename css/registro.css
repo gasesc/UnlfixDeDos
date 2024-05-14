@@ -44,12 +44,6 @@ img {
   text-align: left;
 }
 
-.presentacion form input {
-  width: 100%;
-  padding: 5px;
-  margin: auto;
-}
-
 .presentacion form .boton {
   margin-top: 10px;
   width: 50%;
@@ -61,6 +55,77 @@ img {
 .presentacion form #boton_cancelar {
   background-color: rgb(110, 0, 0);
   color: white;
+}
+.presentacion form .metodos_de_pago{
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.presentacion form .formulario_principal{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
+}
+
+.presentacion form .formulario_principal input{
+  width: calc(100% - 10px);
+  padding: 5px;
+  margin: 5px;
+}
+
+.presentacion form .metodos_de_pago .fila_tarjeta, .fila_cupon, .fila_cbu{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.presentacion form .metodos_de_pago .fila_tarjeta label{
+  width: calc(20% - 10px);  
+}
+
+.presentacion form .metodos_de_pago .fila_tarjeta #radio_tarjeta{
+  max-width: calc(10% - 10px);
+}
+
+.presentacion form .metodos_de_pago .fila_tarjeta #numero_tarjeta{
+  width: calc(50% - 10px);
+  margin: 10px 0px;
+}
+
+.presentacion form .metodos_de_pago .fila_tarjeta #codigo_seguridad{
+  width: calc(20% - 10px);
+  margin: 10px 0px;
+}
+
+.presentacion form .metodos_de_pago .fila_cupon label{
+  max-width: calc(15% - 10px);
+}
+
+.presentacion form .metodos_de_pago .fila_cupon #radio_cupon{
+  width: calc(10% - 10px);
+}
+
+.presentacion form .metodos_de_pago .fila_cupon input[type="checkbox"]{
+  width: calc(20% - 10px);
+  margin: 20px 0px;
+}
+
+.presentacion form .metodos_de_pago .fila_cbu label{
+  width: calc(30% - 10px);
+}
+
+.presentacion form .metodos_de_pago .fila_cbu input{
+  width: calc(10% - 10px);
+}
+
+.presentacion form .metodos_de_pago .fila_cbu h2{
+  width: 100%;
 }
 
 @media (min-width: 1024px) {
@@ -81,13 +146,31 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    flex-direction: row;
   }
   .contenedor_general .presentacion form .formulario_principal,
   .metodos_de_pago {
-    width: calc(50% - 10px);
+    width: calc(49% - 10px);
   }
   .contenedor_general .presentacion form .botones {
     width: 100%;
   }
+
+  .contenedor_general .presentacion form .botones .boton {
+    width: 50%;
+    padding: 15px;
+    font-size: 20px;
+  }
+
+  .contenedor_general .presentacion form .botones .boton:hover {
+    background-color: yellow !important;
+    color: black !important;
+  }
   
+  .contenedor_general .contenedor_logo img{
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+
 }

@@ -1,49 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UNFLIX | Registro</title>
-    <link rel="stylesheet" href="css/registro.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/registro.css" />
+  </head>
+  <body>
     <div class="contenedor_general">
-        <div class="contenedor_logo"><img src="img/logo sin fondo recortado.png" alt="logo"></div>
-            <div class="presentacion">
-                <h1>Registrarse</h1>
-                <form action="#">
-                    <div class="formulario_principal">
-                        <label for="nombre">Nombre:</label>
-                        <input id="nombre" type="text" placeholder="Ingrese su nombre" required>
-                        <label for="apellido">Apellido:</label>
-                        <input id="apellido" type="text" placeholder="Ingrese su apellido" required>
-                        <label for="email">Correo Electronico:</label>
-                        <input id="email" type="email" placeholder="Ingrese su correo" required>
-                        <label for="fecha_nacimiento">Ingrese su fecha de nacimiento:</label>
-                        <input id="fecha_nacimiento" type="date" required>
-                        <label for="pais">Seleccione su pais/region</label>
-                        <input id="pais" type="text" placeholder="Ingrese su pais">
-                        <label for="telefono">Ingrese su numero de telefono</label>
-                        <input id="telefono" type="tel" placeholder="Telefono" required>
-                        <label for="contrasenia">Ingrese una contraseña:</label>
-                        <input id="contraseña" type="password" placeholder="Ingrese una contraseña" required>
-                        <label for="contrasenia">Confirmar contraseña:</label>
-                        <input id="contraseña" type="password" placeholder="Ingrese una contraseña" required>
-                    </div>
-                    <div class="metodos_de_pago">
-                    <h3>Metodos de pago</h3>
-                                           
-                    </div>
-                    <div class="botones">
-                        <input class="boton" id="boton_cancelar" type="button" value="Cancelar">
-                        <input class="boton" type="submit" value="Registrarse">
-                    </div>
-
-
+      <div class="contenedor_logo">
+        <img src="img/logo sin fondo recortado.png" alt="logo" />
+      </div>
+      <div class="presentacion">
+        <h1>Registrarse</h1>
+        <form action="#">
+          <div class="formulario_principal">
+            <label for="nombre">Nombre:</label>
+            <input
+              id="nombre"
+              type="text"
+              placeholder="Ingrese su nombre"
+              required
+            />
+            <label for="apellido">Apellido:</label>
+            <input
+              id="apellido"
+              type="text"
+              placeholder="Ingrese su apellido"
+              required
+            />
+            <label for="email">Correo Electronico:</label>
+            <input
+              id="email"
+              type="email"
+              placeholder="Ingrese su correo"
+              required
+            />
+            <label for="fecha_nacimiento"
+              >Ingrese su fecha de nacimiento:</label
+            >
+            <input id="fecha_nacimiento" type="date" required />
+            <label for="pais">Seleccione su pais/region</label>
+            <input id="pais" type="text" placeholder="Ingrese su pais" />
+            <label for="telefono">Ingrese su numero de telefono</label>
+            <input id="telefono" type="tel" placeholder="Telefono" required />
+            <label for="contrasenia">Ingrese una contraseña:</label>
+            <input
+              id="contraseña"
+              type="password"
+              placeholder="Ingrese una contraseña"
+              required
+            />
+            <label for="contrasenia">Confirmar contraseña:</label>
+            <input
+              id="contraseña"
+              type="password"
+              placeholder="Ingrese una contraseña"
+              required
+            />
+          </div>
+          <div class="metodos_de_pago">
+            <h3>Metodos de pago</h3>
+            <div class="fila_tarjeta">
+              <label for="tarjeta">Tarjeta de credito</label>
+              <input id="radio_tarjeta" type="radio" name="radio_check" />
+              <input
+                type="text"
+                placeholder="Numero de tarjeta"
+                name="numero_tarjeta"
+                id="numero_tarjeta"
+              />
+              <input
+                type="text"
+                placeholder="XXX"
+                name="codigo_seguridad"
+                id="codigo_seguridad"
+              />
             </div>
-
-
+            <div class="fila_cupon">
+              <label for="cupon_de_pago">Cupon de pago</label>
+              <input id="radio_cupon" type="radio" name="radio_check" />
+              <input type="checkbox" /> Pago facil
+              <input type="checkbox" /> Rapipago
+            </div>
+            <div class="fila_cbu">
+              <label for="transferencia"> Transferencia bancaria</label>
+              <input type="radio" id="radio_transferencia" name="radio_check" />
+              <h6>CBU: 2183909411100018971375</h6>
+            </div>
+          </div>
+          <div class="botones">
+            <a href="./bienvenida.html">
+                <input
+                  class="boton"
+                  id="boton_cancelar"
+                  type="button"
+                  value="Cancelar"
+                />
+            </a>
+            <a href="./login.html">
+                <input class="boton" type="submit" value="Registrarse" />
+            </a>
+          </div>
+        </form>
+      </div>
     </div>
-    
-</body>
+  </body>
 </html>
