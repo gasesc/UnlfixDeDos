@@ -147,7 +147,7 @@ main{
     height: 50%;
     margin-top: 5px;
     padding-left: 10px;
-    
+    padding-right: 10px;
 } 
 
 .peliculas_recomendadas img{
@@ -168,7 +168,8 @@ main{
 .datos_trailer{
     height: 100%;
     position: relative;
-    width: 100%;
+    width: 95%;
+    margin: auto;
     /* border: 2px #260028 solid; */
 }
 .contenedor_video{
@@ -197,7 +198,7 @@ p {
     line-height: 1.5; /* Espaciado entre líneas para una mejor legibilidad */
     padding: 10px; /* Espaciado interior para separar el texto del borde del contenedor */
     border-radius: 5px; /* Bordes redondeados para un aspecto más suave */
-    background-color: rgba(255, 255, 255, 0.3);  /* Fondo semi-transparente para suavizar el contraste */
+    background-color: rgba(255, 255, 255, 0.8);  /* Fondo semi-transparente para suavizar el contraste */
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
 }
 .contenedor_video{
@@ -236,6 +237,21 @@ p {
     color: #fff; /* Cambia el color del texto al pasar el cursor */
     transform: scale(1.05);
 }
+form{
+    margin-top: 9px;
+}
+select{
+    width:fit-content;
+    font-size: 15px;
+    padding: 5px;
+    background-color: #260028;
+    border-radius: 4px;
+    color: #fcc8ff;
+}
+option{
+    font-size: 14px;
+    color: white;
+}
 
 .descripcion_pelicula{
     width: 90%;
@@ -249,6 +265,9 @@ h2{
     font-family: Arial, sans-serif;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra con desplazamiento x de 2px, desplazamiento y de 2px y un desenfoque de 4px */
     font-size: 25px;
+    width: 95%;
+    margin: auto;
+
 }
 @media screen and (min-width: 640px)  {
     .datos_trailer{
