@@ -11,7 +11,7 @@ body{
     grid-template-rows: 10% 90%;
     grid-template-areas: 
     " header "
-     "main ";
+    "main ";
 
 }
 header{
@@ -147,6 +147,7 @@ main{
     height: 50%;
     margin-top: 5px;
     padding-left: 10px;
+    padding-right:10px ;
     
 } 
 
@@ -168,7 +169,8 @@ main{
 .datos_trailer{
     height: 100%;
     position: relative;
-    width: 100%;
+    width: 95%;
+    margin: auto;
     /* border: 2px #260028 solid; */
 }
 .contenedor_video{
@@ -238,10 +240,12 @@ p {
 }
 
 .descripcion_pelicula{
+    text-align: center;
     width: 90%;
+    margin: auto;
     position: absolute;
     bottom: 0;
-    left: 0;
+   
 }
 h2{
     color: #F2BE22;
@@ -249,6 +253,9 @@ h2{
     font-family: Arial, sans-serif;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra con desplazamiento x de 2px, desplazamiento y de 2px y un desenfoque de 4px */
     font-size: 25px;
+    text-align: left;
+    width: 95%;
+    margin: auto;
 }
 @media screen and (min-width: 640px)  {
     .datos_trailer{
