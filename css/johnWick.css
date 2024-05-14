@@ -7,6 +7,7 @@ body{
     background-color:#260028 ;
     background-position: center;
 }
+/********************** Inicio Header **********************/
 header {
     position: absolute;
     padding: 20px 40px;
@@ -82,6 +83,10 @@ header .header-options {
 .user-options i:hover {
     color: #fef0ff;
 }
+.logoBar{
+    color: #fcc8ff;
+}
+/********************** Fin Header **********************/
 
 /* ******************************************************* */
 main{
