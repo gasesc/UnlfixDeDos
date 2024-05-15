@@ -13,6 +13,7 @@
 } 
 
 body {
+    font-family: Arial, Helvetica, sans-serif;
     animation: cambioDeFondo 4s infinite;
     background-image: url("../img/abstract-black-background-with-polygonal-shapes.jpg");
     /* background-color: #260028; */
