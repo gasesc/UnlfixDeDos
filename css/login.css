@@ -7,7 +7,7 @@
 @keyframes cambioDeFondo {
     0%  { background-color: #260028; }
     25% { background-color: #340636; }
-    50% { background-color: #360b26; }
+    50% { background-color: #2d0b36; }
     75% { background-color: #340636; }
     100%{ background-color: #260028; }
 } 
@@ -21,9 +21,7 @@ body {
     background-size:cover;
     animation: cambioDeFondo 4s infinite;
     background-position: center;
-     display: flex; 
-    /* flex-direction: column; */
-    font-family: 'Roboto Slab', serif;
+    display: flex; 
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -41,20 +39,14 @@ body {
     box-shadow: 0 0 20px rgba(39, 7, 54, 0.9);
 }
 
-.contenedor_logo{
-    
+.contenedor_logo{    
     text-align: center;
-   
-
 }
 img{
     max-width: 100%;
 }
 
-.presentacion{
-    
-    /* max-width: 35em; */
-   
+.presentacion{    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -62,17 +54,14 @@ img{
     padding: 5px;
 }
 label{
-    color: #fbc8fb ;
-    
-   
+    font-size: 1.2em;
+    color: #fbc8fb ;   
 }
-
 
 .formulario_logueo{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
+    align-items: center;    
 }
 .enlaces{
     display: flex;
@@ -80,14 +69,16 @@ label{
     align-items: center;
 }
 input{
+    margin: 5px;
+    font-size: 1em;
     padding: 5px;
 }
+
 .enviar{
-    background-color: #aa2467; /* Amarillo */
-    color: white; /* Color de texto que contrasta */
+    background-color: #a624aa;
+    color: white;
     margin-top: 10px;
-    padding: 7px;
-    
+    padding: 7px;    
     border: 1px solid #ccc;
     padding: 5px 10px;
     border-radius: 10px;
@@ -101,7 +92,6 @@ input{
     color: #fbc8fb ; 
     text-decoration: underline; 
     font-weight: bold;
-    text-transform: uppercase;
 }
 .enlaces a{
     color:#fbc8fb ;
@@ -116,9 +106,31 @@ input{
 
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-@media screen and (min-width:45em){
-    a{
-        font-size: 160%;
-       
+@media screen and (max-width:768px){
+    .contendor_general{
+        background-image: url("../img/9.jpg");
+        background-color: #260028;
+        background-blend-mode: overlay;
+        border-radius: 10px; 
+        max-width: 10em;
+        box-shadow: 0 0 20px rgba(39, 7, 54, 0.9);
+    }
+    img{
+        max-width: 80%;
+    }
+    .enlaces a{
+        color:#fbc8fb ;
+        font-size: 0.8em;
+    }
+    .enlaces a:hover{
+        font-weight: bold;
+        transition:  font-weigh 0.3s;         
+    }
+    label{
+        font-size: 0.8em;
+    }
+    input{
+        font-size: 0.7em;
+        padding: 3px;
     }
 }

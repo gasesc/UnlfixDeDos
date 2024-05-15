@@ -36,7 +36,7 @@ nav ul {
  
     display: flex;
     list-style: none;
-     /* Ajusta según la necesidad de espacio */
+    
     align-items: flex-start;
     /* border: 2px #fcc8ff solid ; */
     height: 100%;

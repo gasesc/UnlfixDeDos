@@ -1,4 +1,13 @@
+
+@keyframes cambioDeFondo {
+    0%  { background-color: #260028; }
+    25% { background-color: #340636; }
+    50% { background-color: #2d0b36; }
+    75% { background-color: #340636; }
+    100%{ background-color: #260028; }
+} 
 body {
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -6,6 +15,7 @@ body {
   background-size: contain;
   background-blend-mode: overlay;
   background-color: #260028;
+  animation: cambioDeFondo 4s infinite;
 }
 
 .contenedor_general {
@@ -14,7 +24,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(39, 7, 0, 0.9);
   color: white;
@@ -29,7 +38,6 @@ img {
 }
 
 .presentacion {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-align: center;
   padding: 10px;
 }
@@ -127,8 +135,26 @@ img {
 .presentacion form .metodos_de_pago .fila_cbu h2{
   width: 100%;
 }
-
-@media (min-width: 1024px) {
+.boton{
+    background-color: #aa2467; /* Amarillo */
+    color: white; /* Color de texto que contrasta */
+    margin-top: 10px;
+    padding: 7px;    
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; 
+    box-shadow: 0px 2px 4px rgba(230, 226, 226, 0.1)
+}
+.boton:hover {
+    background-color: black; 
+    color: #fbc8fb ; 
+    text-decoration: underline; 
+    font-weight: bold;
+}
+@media (min-width:1024px) {
   .contenedor_general {
     flex-direction: row;
     width: 80%;
@@ -163,8 +189,7 @@ img {
   }
 
   .contenedor_general .presentacion form .botones .boton:hover {
-    background-color: yellow !important;
-    color: black !important;
+    background-color: #1b001b !important;
   }
   
   .contenedor_general .contenedor_logo img{

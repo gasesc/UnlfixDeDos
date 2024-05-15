@@ -16,12 +16,9 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     animation: cambioDeFondo 4s infinite;
     background-image: url("../img/abstract-black-background-with-polygonal-shapes.jpg");
-    /* background-color: #260028; */
     background-blend-mode: overlay;
     background-size:cover;
-     display: flex; 
-    /* flex-direction: column; */
-    font-family: 'Roboto Slab', serif;
+    display: flex; 
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -51,9 +48,6 @@ img{
 }
 
 .presentacion{
-    
-    /* max-width: 35em; */
-   
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -61,7 +55,7 @@ img{
     padding: 5px;
 }
 a{
-    background-color: #aa2467; /* Amarillo */
+    background-color: #aa2467;
     color: white;
     font-size: 1.5em;
     border: 1px solid #ccc;

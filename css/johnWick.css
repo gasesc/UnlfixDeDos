@@ -106,7 +106,7 @@ main{
     /* border: 2px #260028 solid; */
 }
 .contenedor_video{
-    border-radius: 5px; /* Agrega bordes redondeados al contenedor del video */
+    border-radius: 5px;
     overflow: hidden;
 }
 .datos_trailer iframe{
@@ -117,23 +117,21 @@ h1{
     color: #F2BE22;
     font-weight: bold;
     font-family: Arial, sans-serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra con desplazamiento x de 2px, desplazamiento y de 2px y un desenfoque de 4px */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     font-size: 32px;
     margin-top: 80px;
 }
 p {
     margin-top: 9px;
-    color: #333; /* Color de texto oscuro para contraste */
-    font-size: 18px; /* Tamaño de fuente legible */
-    font-family: Arial, sans-serif; /* Familia de fuentes legible */
-    line-height: 1.5; /* Espaciado entre líneas para una mejor legibilidad */
-    padding: 10px; /* Espaciado interior para separar el texto del borde del contenedor */
-    border-radius: 5px; /* Bordes redondeados para un aspecto más suave */
-     /* Fondo semi-transparente para suavizar el contraste */
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
+    color: #333; 
+    font-size: 18px; 
+    font-family: Arial, sans-serif;
+    line-height: 1.5; 
+    padding: 10px; 
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Ajustes adicionales para el responsive y otros estilos específicos */
 
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
@@ -142,16 +140,16 @@ p {
         padding: 20px 20px;
     }
     header img{
-        width: 20%; /* Full width for better mobile experience */
+        width: 20%; 
     }
     .navbar-container {
         top: 0%;
     }
     .main-logo {
-        width: 80%; /* Full width for better mobile experience */
+        width: 80%; 
     }
     .user-options {
-        width: 16%; /* Full width for better mobile experience */
+        width: 16%;
     }
     .logoBar{
         width: 100%;

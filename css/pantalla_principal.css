@@ -43,45 +43,54 @@ header .header-options {
 }
 
 .navbar ul li {
+    transition: transform 0.3s ease;
     padding: 10px;
     color: #fcc8ff;
 }
 
 .navbar ul li a {
+    transition: transform 0.3s ease;
     color: #fcc8ff;
     text-decoration: none;
     font-size: 1rem;
 }
 .navbar ul li i {
+    transition: transform 0.3s ease;
     color: #fcc8ff;
     text-decoration: none;
     font-size: 1rem;
 
 }
 .navbar ul li a:hover {
+    transform: scale(1.10);
     font-weight: 500;
     color: #fef0ff;
     font-size: 1rem;
 }
 .navbar ul li i:hover {
+    transform: scale(1.10);
     color: #fef0ff;
 }
 .user-options a{
+    transition: transform 0.3s ease;
     color: #fcc8ff;
     text-decoration: none;
     font-size: 1rem;
 }
 .user-options i{
+    transition: transform 0.3s ease;
     color: #fcc8ff;
     text-decoration: none;
     font-size: 1rem;
 }
 .user-options a:hover {
+    transform: scale(1.10);
     font-weight: 500;
     color: #fef0ff;
     font-size: 1rem;
 }
 .user-options i:hover {
+    transform: scale(1.10);
     color: #fef0ff;
 }
 .logoBar{
@@ -151,6 +160,7 @@ header .header-options {
     color: #fef0ff;
 }
 .box{
+    transition: transform 0.3s ease;
     background-color: #fcc8ff;
     color: #fef0ff;
     border-radius: 5px;
@@ -159,6 +169,7 @@ header .header-options {
 }
 
 .box:hover{
+    transform: scale(1.10);
     background-color: #fef0ff;
     color: #fcc8ff;
 }

@@ -1,11 +1,18 @@
+@keyframes cambioDeFondo {
+  0%  { background-color: #260028; }
+  25% { background-color: #340636; }
+  50% { background-color: #2d0b36; }
+  75% { background-color: #340636; }
+  100%{ background-color: #260028; }
+}
 body {
   background-image: url("../img/abstract-black-background-with-polygonal-shapes.jpg");
   background-size: cover;
   background-color: #260028;
   background-blend-mode: overlay;
   display: flex;
-  /* flex-direction: column; */
-  font-family: "Roboto Slab", serif;
+  animation: cambioDeFondo 4s infinite;
+  font-family: Arial, Helvetica, sans-serif;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -57,7 +64,6 @@ label {
   color: white; /* Color de texto que contrasta */
   margin-top: 10px;
   padding: 7px;
-
   border: 1px solid #ccc;
   padding: 5px 10px;
   border-radius: 10px;
@@ -65,6 +71,12 @@ label {
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
   box-shadow: 0px 2px 4px rgba(230, 226, 226, 0.1);
+}
+.enviar:hover {
+  background-color: black; 
+  color: #fbc8fb ; 
+  text-decoration: underline; 
+  font-weight: bold;
 }
 .enlaces {
   padding: 10px;
@@ -75,9 +87,46 @@ label {
   color: #fbc8fb;
   font-size: 1.1em;
   text-decoration: none;
-  font-family: serif;
 }
 .enlaces a:hover {
   font-weight: bold;
   transition: font-weigh 0.3s;
+}
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+@media screen and (max-width:768px){
+  .contendor_general{
+      background-image: url("../img/9.jpg");
+      background-color: #260028;
+      background-blend-mode: overlay;
+      border-radius: 10px; 
+      max-width: 10em;
+      box-shadow: 0 0 20px rgba(39, 7, 54, 0.9);
+  }
+  .formulario_recuperar_contrasenia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  img{
+      max-width: 80%;
+  }
+  .enlaces a{
+      color:#fbc8fb ;
+      font-size: 0.8em;
+  }
+  .enlaces a:hover{
+      font-weight: bold;
+      transition:  font-weigh 0.3s;         
+  }
+  label{
+      font-size: 0.8em;
+  }
+  input{
+    max-width: 90%;
+    font-size: 0.7em;
+    padding: 3px;
+  }
 }
