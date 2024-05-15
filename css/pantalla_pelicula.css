@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 body{
+    font-family: Arial, Helvetica, sans-serif;
     display: grid;
     width: 100%;
     height: 100vh;
@@ -33,10 +34,8 @@ nav{
 }
 
 nav ul {
- 
     display: flex;
     list-style: none;
-     /* Ajusta según la necesidad de espacio */
     align-items: flex-start;
     justify-content: center;
     /* border: 2px #fcc8ff solid ; */
@@ -59,6 +58,9 @@ nav ul li{
     justify-content: center;
     /* border: 2px #32a83c solid ;  */
 }
+.iconitos{
+    color:  rgb(252, 200, 255);
+ }
 
 .contenedor_perfil {
     width: 15%;
@@ -174,7 +176,7 @@ main{
     /* border: 2px #260028 solid; */
 }
 .contenedor_video{
-    border-radius: 5px; /* Agrega bordes redondeados al contenedor del video */
+    border-radius: 5px; 
     overflow: hidden;
     background-color: #260028;
 }
@@ -188,19 +190,19 @@ h1{
     color: #F2BE22;
     font-weight: bold;
     font-family: Arial, sans-serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra con desplazamiento x de 2px, desplazamiento y de 2px y un desenfoque de 4px */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
     font-size: 32px;
 }
 p {
     margin-top: 9px;
-    color: #333; /* Color de texto oscuro para contraste */
-    font-size: 15x; /* Tamaño de fuente legible */
-    font-family: Arial, sans-serif; /* Familia de fuentes legible */
-    line-height: 1.5; /* Espaciado entre líneas para una mejor legibilidad */
-    padding: 10px; /* Espaciado interior para separar el texto del borde del contenedor */
-    border-radius: 5px; /* Bordes redondeados para un aspecto más suave */
-    background-color: rgba(255, 255, 255, 0.3);  /* Fondo semi-transparente para suavizar el contraste */
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
+    color: #333; 
+    font-size: 15px; 
+    font-family: Arial, sans-serif; 
+    line-height: 1.5; 
+    padding: 10px; 
+    border-radius: 5px; 
+    background-color: rgba(255, 255, 255, 0.3);  
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); 
 }
 .contenedor_video{
     display: none;
@@ -209,33 +211,33 @@ p {
     margin-top: 2%;
     display:block;
     width: fit-content;
-    padding: 10px 20px; /* Ajusta el relleno según sea necesario */
-    background-color: #fcc8ff; /* Cambia el color de fondo según sea necesario */
-    color: #000; /* Cambia el color del texto según sea necesario */
-    text-decoration: none; /* Quita el subrayado predeterminado */
-    border-radius: 5px; /* Agrega bordes redondeados */
-    cursor: pointer; /* Cambia el cursor a una mano */
+    padding: 10px 20px; 
+    background-color: #fcc8ff; 
+    color: #000; 
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 .trailer:hover {
     
-    background-color: #260028; /* Cambia el color de fondo al pasar el cursor */
-    color: #fff; /* Cambia el color del texto al pasar el cursor */
+    background-color: #260028; 
+    color: #fff; 
     transition: transform 0.3s ease;
 }
 .ver{
     margin-top: 2%;
     display:block;
     width: fit-content;
-    padding: 10px 20px; /* Ajusta el relleno según sea necesario */
-    background-color: #260028; /* Cambia el color de fondo según sea necesario */
-    color: #fff; /* Cambia el color del texto según sea necesario */
-    text-decoration: none; /* Quita el subrayado predeterminado */
-    border-radius: 5px; /* Agrega bordes redondeados */
-    cursor: pointer; /* Cambia el cursor a una mano */ 
+    padding: 10px 20px; 
+    background-color: #260028; 
+    color: #fff; 
+    text-decoration: none; 
+    border-radius: 5px;
+    cursor: pointer; 
 }
 .ver:hover{
-    background-color: #641a68; /* Cambia el color de fondo al pasar el cursor */
-    color: #fff; /* Cambia el color del texto al pasar el cursor */
+    background-color: #641a68; 
+    color: #fff; 
     transform: scale(1.05);
 }
 
@@ -251,7 +253,7 @@ h2{
     color: #F2BE22;
     font-weight: bold;
     font-family: Arial, sans-serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra con desplazamiento x de 2px, desplazamiento y de 2px y un desenfoque de 4px */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
     font-size: 25px;
     text-align: left;
     width: 95%;
