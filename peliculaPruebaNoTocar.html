@@ -3,13 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    script src="https://kit.fontawesome.com/2edf5860bb.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/2edf5860bb.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="css/notocar.css">
     <title>Document</title>
 </head>
 <body>
-    <header></header>
+    <header>
+        <section class="icono">
+            <img src="img/logo horizontal.png" alt="">
+        </section>
+        <section class="navegador">
+            <nav>
+                <ul>
+                  <li class="contenedor_nav">
+                    <a href="pantalla_principal.html">
+                      <span class="logoBar"><i class="fa-sharp fa-solid fa-house iconitos" ></i></span>
+                      <span class="fontBar">Inicio</span>
+                    </a>
+                  </li>      
+                  <li class="contenedor_nav">
+                    <a href="pantalla_principal.html #series">
+                      <span class="logoBar"><i class="fa-solid fa-tv iconitos" ></i></span>
+                      <span class="fontBar">Series</span>
+                    </a>
+                  </li>
+                  <li class="contenedor_nav">
+                    <a href="pantalla_principal.html #peliculas">
+                      <span class="logoBar"><i class="fa-sharp fa-solid fa-film iconitos" ></i></span>
+                      <span class="fontBar">Peliculas</span>
+                    </a>
+                  </li>
+                  <li class="contenedor_nav">
+                    <a href="pantalla_buscar.html">
+                      <span class="logoBar"><i class="fa-solid fa-magnifying-glass iconitos" ></i></span>
+                      <span class="fontBar">Buscar</span>
+                    </a>
+                  </li>        
+                </ul>
+              </nav>
+        </section>
+        <section class="perfil">
+            <a href="login.html"><span class="fontBar">Cerrar Sesion</span></a>
+          <a href="login.html"><span class="logoBar"><i class="fa-solid fa-circle-user" ></i></span></a> 
+        </section>
+
+
+    </header>
     <main>
         <section class="datosPelicula">
             <article class="datos_trailer">
@@ -27,14 +68,16 @@
                   <p>John Wick regresa de nuevo pero con una recompensa sobre su cabeza que persigue unos mercenarios. Tras asesinar a uno de los miembros de su gremio, Wick es expulsado y se convierte en el foco de atención de todos los sicarios de la organización.</p>
                 </div>
                 
-               
-                <div class="contenedor_video"> <iframe width="560" height="315" src="https://www.youtube.com/embed/M7XM597XO94?si=ueW_WQpSIf_qFCrw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="gui">
+                    <div class="contenedor_video"> <iframe width="560" height="315" src="https://www.youtube.com/embed/M7XM597XO94?si=ueW_WQpSIf_qFCrw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="contenedor_botones">
+                    <a href="https://www.youtube.com/watch?v=M7XM597XO94" class="trailer">ver trailer</a>
+                    <a href="https://www.youtube.com/watch?v=M7XM597XO94" class="ver">ver ahora</a>
+                        
+                    </div>
                 </div>
-                <div class="contenedor_botones">
-                <a href="https://www.youtube.com/watch?v=M7XM597XO94" class="trailer">ver trailer</a>
-                <a href="https://www.youtube.com/watch?v=M7XM597XO94" class="ver">ver ahora</a>
-    
-                </div>
+              
                 
               </article>
         </section>

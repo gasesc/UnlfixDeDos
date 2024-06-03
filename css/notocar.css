@@ -23,9 +23,60 @@ body{
 }
 header{
     grid-area: header;
-
     background-color: aqua;
+    display: grid;
+    grid-template-columns: 30% 50% 20%;
+    grid-template-rows: 100%;
+    grid-template-areas: 
+    "icono navegador perfil";
 }
+.icono{
+    grid-area: icono;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icono img{
+    max-width: 100%;
+}
+.fontBar{
+    display: none;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px #fcc8ff solid ; */
+    height: 100%;
+    width: fit-content;
+    margin: auto;
+    /* border: 2px rgb(153, 51, 131) solid; */
+    
+}
+nav ul li{
+    padding: 10px;
+}
+.perfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navegador{
+    grid-area: navegador;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.perfil{
+    grid-area: perfil;
+    background-color: brown;
+}
+
+
 main{
     grid-area: main;
     display: grid;
@@ -117,10 +168,11 @@ main{
     "gran_contenedor";
 }
 .gran_contenedor{
+    width: 100%;
     grid-area: gran_contenedor;
     overflow-y: auto;
-    display: grid;
-    gap: 4%;
+    display: flex;
+    flex-direction: column;
 
 }
 h2{
@@ -138,13 +190,84 @@ h2{
 }
 .peliculas_recomendadas img{
     display: block;
-    width:  100%;
+    width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 .imagenPelicula img {
     display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
+    max-width: 100%;  
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 640px){
+    .gran_contenedor {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .peliculas_recomendadas {
+        width: 45%;
+    } 
+}
+@media screen and (min-width: 960px){
+    main{
+        grid-area: main;
+        display: grid;
+        width: 70%;
+        
+        margin: auto;
+        grid-template-columns: 40% 60%;
+        grid-template-rows:40% 60%;
+        grid-template-areas: 
+        "imagenPelicula datosPelicula"
+        "peliculasrecomendadas peliculasrecomendadas";
+    }
+    
+    .gran_contenedor {
+
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .peliculas_recomendadas {
+        width: calc(25% - 5px);
+        height: 40%;
+    } 
+    header{
+        width: 70%;
+        margin-left: 15%;
+        margin-right: 15%;
+        grid-template-columns: 15% 70% 15%;
+    }
+    .fontBar{
+        display: inline;
+    }
+ 
+    .datos_trailer{
+        height: 100%;
+    }
+    h1{
+        height: 10%;
+    }
+    .material-symbols-outlined{
+        height: 10%;
+    }
+    .descripcion_pelicula{
+        height: 35%;
+    }
+    .gui{
+        display: flex;
+        height: 45%;
+    }
+    .gui div {
+        width: 50%;
+    }
+    .contenedor_video iframe{
+        width: 100%;
+        height: 100%;
+    }
+    .contenedor_video{display: block;}
 }
