@@ -195,6 +195,9 @@ header .header-options {
     border-radius: 5px;
     
 }
+ul li a:hover{
+    border: 2px #fcc8ff solid;
+   }
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 @media (max-width: 825px) {
@@ -255,5 +258,7 @@ header .header-options {
     .on{
         display: block;
     }
-    
+    ul li a:hover{
+        border: 2px #fcc8ff solid;
+       }
 }

@@ -227,7 +227,9 @@ header .header-options {
     font-size: 1.5rem;
     color: #fef0ff;
 }
-
+ul li a:hover{
+    border: 2px #fcc8ff solid;
+   }
 
 /********************* Inicio Mobile *********************/
 
