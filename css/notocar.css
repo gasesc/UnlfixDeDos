@@ -75,10 +75,7 @@ nav ul li{
     grid-area: perfil;
     background-color: brown;
 }
-.imagenPelicula iframe{
-    height: 100%;
-    width: 100%;
-}
+
 
 main{
     grid-area: main;
@@ -258,7 +255,7 @@ h2{
     .material-symbols-outlined{
         height: 10%;
     }
-    .descripcion_pelicula{
+    .descipcion_pelicula{
         height: 35%;
     }
     .gui{
@@ -273,8 +270,4 @@ h2{
         height: 100%;
     }
     .contenedor_video{display: block;}
-    .imagenPelicula iframe{
-        height: 100%;
-        width: 100%;
-    }
 }

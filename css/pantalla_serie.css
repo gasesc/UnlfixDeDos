@@ -258,6 +258,10 @@ h2{
 .logoBar{
     color: #fcc8ff;
 }
+.on{
+    display: block;
+}
+
 @media screen and (min-width: 640px)  {
     .datos_trailer{
         width: 95%;
@@ -300,6 +304,10 @@ h2{
     .fontBar{
         display: none;
     }
+    .on{
+        display: block;
+    }
+    
 }
 
 @media screen and (min-width: 900px) {

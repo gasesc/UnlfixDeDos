@@ -252,4 +252,8 @@ header .header-options {
         color: #fcc8ff;
         background-color: #260028;
     }
+    .on{
+        display: block;
+    }
+    
 }
