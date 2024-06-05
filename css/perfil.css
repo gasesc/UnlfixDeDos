@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,9 +12,9 @@
 } 
 body {
     background-image: url("../img/abstract-black-background-with-polygonal-shapes.jpg");
-    background-color:#260028 ;
+    background-color: #260028;
     background-blend-mode: overlay;
-    background-size:cover;
+    background-size: cover;
     animation: cambioDeFondo 4s infinite;
     font-family: Arial, sans-serif;
     margin: 0;
@@ -28,9 +28,9 @@ body {
 
 .profile-container {
     background-image: url("../img/abstract-black-background-with-polygonal-shapes.jpg");
-    background-color:#260028 ;
+    background-color: #260028;
     background-blend-mode: overlay;
-    background-size:cover;
+    background-size: cover;
     animation: cambioDeFondo 4s infinite;
     border-radius: 8px;
     padding: 20px;
@@ -90,20 +90,25 @@ body {
 .buttons {
     display: flex;
     gap: 20px;
+    justify-content: center; /* Center align buttons horizontally */
+    align-items: center;
 }
 
+.buttons a,
 .buttons button {
-    flex: 1;
+    flex: none; /* Prevent buttons from stretching */
+    width: 200px; /* Set a fixed width for buttons */
     padding: 10px;
-    border: none;
     border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transform to transition */
 }
 
 .buttons .save {
     background-color: #fcc8ff;
-    color: #260028 ;
+    color: #260028;
 }
 
 .buttons .cancel {
@@ -111,37 +116,40 @@ body {
     color: white;
 }
 
+.buttons a:hover,
 .buttons button:hover {
     opacity: 0.8;
+    transform: scale(1.1); /* Scale the button to make it larger */
 }
-label{
+
+label {
     color: #fcc8ff;
 }
-.cbu{
+
+.cbu {
     color: #fcc8ff;
 }
-.profile-pic img{
+
+.profile-pic img {
     width: 100%;
-    
     overflow: hidden;
     border-radius: 50%;
     box-shadow: 0 0 20px rgba(39, 7, 54, 0.9);
     border: 2px #fcc8ff solid;
 }
-.up{
+
+.up {
     margin-top: 10px;
     width: fit-content;
     margin: auto;
     margin-top: 10px;
 }
+
+
 /* Tablet and above */
 @media screen and (min-width: 640px) {
     .row {
         flex-direction: row;
-    }
-
-    .column {
-        flex: 1;
     }
 }
 
