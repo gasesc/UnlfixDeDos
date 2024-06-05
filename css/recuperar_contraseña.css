@@ -20,7 +20,11 @@ body {
   margin: 0;
 }
 .contendor_general {
+  background-image: url("../img/9.jpg");
   background-color: #260028;
+  background-blend-mode: overlay;
+  background-size:cover;
+  animation: cambioDeFondo 4s infinite;
   border-radius: 15px;
   max-width: 50em;
   box-shadow: 0 0 20px rgba(39, 7, 54, 0.9);

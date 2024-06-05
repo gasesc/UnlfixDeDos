@@ -12,20 +12,24 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-image: url("../img/abstract-black-background-with-polygonal-shapes.jpg");
-  background-size: contain;
+  background-size: cover;
   background-blend-mode: overlay;
   background-color: #260028;
   animation: cambioDeFondo 4s infinite;
 }
 
 .contenedor_general {
+  background-image: url("../img/abstract-black-background-with-polygonal-shapes.jpg");
+
   background-color: #260028;
+  background-blend-mode: overlay;
+    background-size:cover;
   padding: 15px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(39, 7, 0, 0.9);
+  box-shadow: 0 0 20px rgba(39, 7, 54, 0.9);
   color: white;
 }
 

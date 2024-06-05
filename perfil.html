@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/perfil.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="profile-container">
+        <div class="row">
+            <div class="column">
+                <div class="profile-pic">
+                    <img src="img/perfilciber.jpg" alt="">
+                </div>
+            </div>
+            <div class="column">
+                <div class="readonly-field">mail@example.com</div>
+                <div class="readonly-field">********</div>
+                <input type="password" class="input-field" placeholder="Nueva contraseña">
+                <input type="password" class="input-field" placeholder="Repita contraseña">
+            </div>
+            <div class="column">
+                <label>Método de pago</label>
+                <div class="payment-method">
+                    <label><input type="radio" name="payment" value="credit-card"> Tarjeta de crédito</label>
+                    <input type="text" placeholder="Número de tarjeta">
+                    <input type="text" placeholder="XXX">
+
+                    <label><input type="radio" name="payment" value="coupon"> Cupón de pago</label>
+                    <label><input type="checkbox" name="coupon-method" value="pago-facil"> Pago Fácil</label>
+                    <label><input type="checkbox" name="coupon-method" value="rapi-pago"> Rapi Pago</label>
+
+                    <label><input type="radio" name="payment" value="bank-transfer"> Transferencia bancaria</label>
+                    <div class="cbu">CBU: 1234567890123456789012</div>
+                </div>
+            </div>
+        </div>
+        <div class="row buttons">
+            <button class="save">Guardar cambios</button>
+            <button class="cancel">Cancelar suscripción</button>
+        </div>
+        <div class="row buttons up">
+            <button class="save">Home</button>
+        </div>
+    </div>
+</body>
+</html>

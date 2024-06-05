@@ -353,6 +353,19 @@ h2{
     .fontBar{
         display: block;
     }
+    header{
+        grid-area: header;
+        background-color: aqua;
+        display: grid;
+        grid-template-columns: 10% 70% 20%;
+        grid-template-rows: 100%;
+        grid-template-areas: 
+        "icono navegador perfil";
+    }
+    .perfil{
+        justify-content: right;
+    }
+
     /* .contenedor2{
         display: flex;
         justify-content: space-around;
