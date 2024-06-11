@@ -1,5 +1,13 @@
-let nombre =document.querySelector("#nombre");//Es el input donde ingreso el nombre
-let apellido =document.querySelector("#apellido");
+let nombreInput =document.querySelector("#nombre");//Es el input donde ingreso el nombre
+let apellidoInput =document.querySelector("#apellido");
+let correoInput=document.querySelector("#email")
+const usuario = {
+    nombre: "",
+    apellido: "",
+    email: "",
+    nombreDeUsuario: "",
+    contraseña: ""
+};
 
 function verificar(e) {
     const regex = /^[a-zA-Z]+$/;
@@ -11,7 +19,21 @@ function verificar(e) {
         console.log(e.target.value);
     }
 }
-nombre.addEventListener("input",verificar);
-apellido.addEventListener("input",verificar);
+function verificarCorreo(e){
+    
+    const regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    let input =e.target;
+    if(!regexCorreo.test(input.value)){
+        console.log("correo invalido")
+    }
+    else{
+        console.log("correo correcto")
+        usuario.email=input.value;
+    }
+}
+nombreInput.addEventListener("input",verificar);
+apellidoInput.addEventListener("input",verificar);
+correoInput.addEventListener("input",verificarCorreo);
+
 
 
