@@ -158,6 +158,9 @@ img {
     text-decoration: underline; 
     font-weight: bold;
 }
+html, body {
+  overflow-x: hidden;
+}
 @media (min-width:1024px) {
   .contenedor_general {
     flex-direction: row;

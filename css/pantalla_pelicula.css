@@ -88,6 +88,9 @@ nav ul li a {
 ul li a:hover{
     border: 2px #fcc8ff solid;
    }
+   html, body {
+    overflow-x: hidden;
+}
 
 
 /* **************************************************************** */
