@@ -158,6 +158,15 @@ img {
     text-decoration: underline; 
     font-weight: bold;
 }
+.errorOculto{
+  display: none;
+  color: red;
+  
+}
+.errorOn{
+  display: block;
+  color: red;
+}
 html, body {
   overflow-x: hidden;
 }
