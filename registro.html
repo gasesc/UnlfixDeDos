@@ -45,6 +45,8 @@
             
             <label for="nombreUsuario">ingrese nombre de usuario</label>
             <input id="nombreUsuario" type="text" placeholder="Usuario" required />
+            <p class="errorOculto" id="usuarioError">digite un usuario correcto</p>
+
             <label for="contrasenia">Ingrese una contraseña:</label>
             <input
               id="contrasenia"
@@ -59,6 +61,8 @@
               placeholder="Ingrese una contraseña"
               required
             />
+            <p class="errorOculto" id="contrasenia2Error">digite una contraseña correcto</p>
+
           </div>
           <div class="metodos_de_pago">
             <h3>Metodos de pago</h3>
@@ -77,6 +81,9 @@
                 name="codigo_seguridad"
                 id="codigo_seguridad"
               />
+              <p class="errorOculto" id="tarjetaError">digite un numero de tarjeta correcto</p>
+              <p class="errorOculto" id="cifraError">digite 3 digitos distintos de cero</p>
+
             </div>
             <div class="fila_cupon">
               <label for="cupon_de_pago">Cupon de pago</label>
