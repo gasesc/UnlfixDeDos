@@ -12,6 +12,10 @@ let contraseniaError=document.querySelector("#contrasenia2Error")
 let tarjetaInput=document.querySelector("#numero_tarjeta");
 let tarjetaError=document.querySelector("#tarjetaError");
 let cifraError=document.querySelector("#cifraError");
+let pagoFacil=document.querySelector("#pagoFacil");
+let rapiPago=document.querySelector("#rapipago")
+let cupon=document.getElementsByTagName("cupon");
+let codigoSeguridadInput=document.querySelector("#codigo_seguridad");
 let contraseniaRespaldo=null;
 
 const usuario = {
@@ -20,7 +24,10 @@ const usuario = {
     email: "",
     nombreDeUsuario: "",
     contraseña: "",
-    tarjeta:""
+    tarjeta:"",
+    rapiPago:"",
+    pagoFacil:"",
+    tresDigitos:""
 };
 
 function verificarNombre(e) {
@@ -151,7 +158,44 @@ function verificarTarjeta(e) {
         }
     }
 }
-
+function guardarCuponDePago(e) {
+    const input = e.target;
+    if (input.id === "pagoFacil") {
+        if (input.checked) {
+            usuario.pagoFacil = input.value;
+        } else {
+            usuario.pagoFacil = "";
+        }
+        console.log(usuario.pagoFacil);
+    } else if (input.id === "rapipago") {
+        if (input.checked) {
+            usuario.rapiPago = input.value;
+        } else {
+            usuario.rapiPago = "";
+        }
+        console.log(usuario.rapiPago);
+    }
+}
+function verificarDigitos(e){
+    const input=e.target.value;
+    const arrayNumeros = input.split('').map(Number);
+    if(arrayNumeros.length===3){
+        if(arrayNumeros[0]===0 && arrayNumeros[1]===0 && arrayNumeros[2]===0){
+            usuario.tresDigitos=null;
+            console.log(usuario.tresDigitos)
+        }else{
+            usuario.tresDigitos=input;
+            console.log(usuario.tresDigitos)
+        }
+        
+    }else{
+        console.log("digite un numero valido")
+    }
+    
+}
+codigoSeguridadInput.addEventListener("input",verificarDigitos);
+pagoFacil.addEventListener("change",guardarCuponDePago);
+rapiPago.addEventListener("change",guardarCuponDePago);
 nombreInput.addEventListener("input",verificarNombre);
 apellidoInput.addEventListener("input",verificarApellido);
 correoInput.addEventListener("input",verificarCorreo);
