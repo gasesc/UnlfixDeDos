@@ -113,21 +113,43 @@ function verificarContasenia2(e){
     }
 }
 
-function verificarTarjeta(e){
-    const regexTarjeta= /^\d{16,19}$/;
-    const input=e.target;
-    if(!regexTarjeta.test(input.value)){
+function verificarTarjeta(e) {
+    const regexTarjeta = /^\d{16,19}$/;
+    const input = e.target.value;
+    let suma = 0;
+
+    // Verificar si el input cumple con el regex
+    if (!regexTarjeta.test(input)) {
         tarjetaError.classList.remove("errorOculto");
         tarjetaError.classList.add("errorOn");
-        usuario.tarjeta=null;
+        usuario.tarjeta = null;
         console.log(usuario.tarjeta);
-    }else{
-        tarjetaError.classList.remove("errorOn");
-        tarjetaError.classList.add("errorOculto");
-        usuario.tarjeta=input.value;
-        console.log(usuario.tarjeta);
-    }
+    } else {
+        const arrayNumeros = input.split('').map(Number);
+        
+        // Sumar los números del array
+        for (let i = 0; i < arrayNumeros.length - 1; i++) {
+            suma += arrayNumeros[i];
+        }
 
+        // Verificar las condiciones y actualizar el estado del error
+        if (suma % 2 !== 0 && (arrayNumeros.length - 1) % 2 === 0) {
+            tarjetaError.classList.remove("errorOn");
+            tarjetaError.classList.add("errorOculto");
+            usuario.tarjeta = input;
+            console.log(usuario.tarjeta);
+        } else if (suma % 2 === 0 && (arrayNumeros.length - 1) % 2 !== 0) {
+            tarjetaError.classList.remove("errorOn");
+            tarjetaError.classList.add("errorOculto");
+            usuario.tarjeta = input;
+            console.log(usuario.tarjeta);
+        } else {
+            tarjetaError.classList.remove("errorOculto");
+            tarjetaError.classList.add("errorOn");
+            usuario.tarjeta = null;
+            console.log(usuario.tarjeta);
+        }
+    }
 }
 
 nombreInput.addEventListener("input",verificarNombre);
