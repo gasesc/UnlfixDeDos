@@ -16,7 +16,25 @@ let pagoFacil=document.querySelector("#pagoFacil");
 let rapiPago=document.querySelector("#rapipago")
 let cupon=document.getElementsByTagName("cupon");
 let codigoSeguridadInput=document.querySelector("#codigo_seguridad");
+let registrarseInput=document.querySelector("#registrarse")
 let contraseniaRespaldo=null;
+let arrayDeUsuarios=JSON.parse(localStorage.getItem("usuarios"));
+
+const USUARIOS = 'usuarios';
+
+// Función para obtener el array de usuarios del localStorage
+function getUsersFromLocalStorage() {
+    const usuariosString = localStorage.getItem(USUARIOS);
+    if (usuariosString) {
+        return JSON.parse(usuariosString);
+    } else {
+        // Si no hay ningún valor en localStorage, devolver un array vacío
+        return [];
+    }
+}
+
+// Ejemplo de cómo usar la función para obtener los usuarios
+const usuariosArray = getUsersFromLocalStorage();
 
 const usuario = {
     nombre: "",
@@ -193,6 +211,38 @@ function verificarDigitos(e){
     }
     
 }
+function verificarTilde(){
+    if(usuario.pagoFacil==="1" &&usuario.rapiPago==="2"){
+        return true;
+    }
+    else if(usuario.pagoFacil==="1" &&usuario.rapiPago===""){
+        return true;
+    }
+    else if(usuario.pagoFacil==="" &&usuario.rapiPago==="2"){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+function enviarDatos() {
+    const check = verificarTilde();
+
+    // Verificar si todos los campos necesarios están llenos y las condiciones están cumplidas
+    if (usuario.nombre !== null && usuario.apellido !== null && usuario.contraseña !== null &&
+        usuario.nombreDeUsuario !== null && usuario.tarjeta !== null && usuario.tresDigitos !== null &&
+        check === true) {
+        registrarseInput.disabled = false; // Habilitar el botón de registrarse
+    } else {
+        registrarseInput.disabled = true; // Deshabilitar el botón de registrarse
+    }
+}
+function subirUsuario(){
+    usuariosArray.push(usuario);
+    localStorage.setItem(USUARIOS,JSON.stringify(usuariosArray));
+}
+
 codigoSeguridadInput.addEventListener("input",verificarDigitos);
 pagoFacil.addEventListener("change",guardarCuponDePago);
 rapiPago.addEventListener("change",guardarCuponDePago);
@@ -204,5 +254,16 @@ contraseniaInput.addEventListener("input",verificarContasenia);
 contraseniaInput2.addEventListener("input",verificarContasenia2);
 tarjetaInput.addEventListener("input",verificarTarjeta);
 
+nombreInput.addEventListener("input", enviarDatos);
+apellidoInput.addEventListener("input", enviarDatos);
+correoInput.addEventListener("input", enviarDatos);
+usuarioInput.addEventListener("input", enviarDatos);
+contraseniaInput.addEventListener("input", enviarDatos);
+contraseniaInput2.addEventListener("input", enviarDatos);
+tarjetaInput.addEventListener("input", enviarDatos);
+pagoFacil.addEventListener("change", enviarDatos);
+rapiPago.addEventListener("change", enviarDatos);
+codigoSeguridadInput.addEventListener("input", enviarDatos);
+registrarseInput.addEventListener("click",subirUsuario);
 
 
