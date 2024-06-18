@@ -12,24 +12,29 @@
             <div class="column">
                 <div class="profile-pic">
                     <img src="img/perfilciber.jpg" alt="">
+                  
+                </div>
+                <div>
+                    <h3 id="nombre">usuario</h3>
                 </div>
             </div>
             <div class="column">
-                <div class="readonly-field">mail@example.com</div>
+                <div class="readonly-field" id="email">mail@example.com</div>
                 <div class="readonly-field">********</div>
-                <input type="password" class="input-field" placeholder="Nueva contraseña">
-                <input type="password" class="input-field" placeholder="Repita contraseña">
+                <input type="password" class="input-field" placeholder="Nueva contraseña" id="primeraContraseña">
+                <input type="password" class="input-field" placeholder="Repita contraseña" id="segundaContraseña">
+                <p class="errorOculto" id="contrasenia2Error">digite una contraseña correcto</p>
             </div>
             <div class="column">
                 <label>Método de pago</label>
                 <div class="payment-method">
                     <label><input type="radio" name="payment" value="credit-card"> Tarjeta de crédito</label>
-                    <input type="text" placeholder="Número de tarjeta">
-                    <input type="text" placeholder="XXX">
+                    <input type="text" placeholder="Número de tarjeta" id="tarjeta">
+                    <input type="text" placeholder="XXX" id="codigo">
 
                     <label><input type="radio" name="payment" value="coupon"> Cupón de pago</label>
-                    <label><input type="checkbox" name="coupon-method" value="pago-facil"> Pago Fácil</label>
-                    <label><input type="checkbox" name="coupon-method" value="rapi-pago"> Rapi Pago</label>
+                    <label><input type="checkbox" name="coupon-method" value="1"> Pago Fácil</label>
+                    <label><input type="checkbox" name="coupon-method" value="2"> Rapi Pago</label>
 
                     <label><input type="radio" name="payment" value="bank-transfer"> Transferencia bancaria</label>
                     <div class="cbu">CBU: 1234567890123456789012</div>
@@ -45,5 +50,7 @@
             <a href="pantalla_principal.html" class="save">home</a>
         </div>
     </div>
+
+    <script src="js/perfil.js"></script>
 </body>
 </html>

@@ -1,5 +1,6 @@
 // Nombre de la clave en el localStorage
 const USUARIOS = 'usuarios';
+let contectado=false;
 
 // Función para inicializar el array de usuarios en el localStorage si no existe
 function initializeUsers() {
@@ -14,3 +15,4 @@ function initializeUsers() {
     }
 }
 initializeUsers();
+localStorage.setItem("usuarioConetado",JSON.stringify(contectado));
