@@ -69,37 +69,68 @@ function verificarContasenia(e){
 }
 
 
+// function verificarContasenia2(e){
+//     const input =e.target;
+//     if(contraseniaRespaldo===input.value){
+//         for (let i = 0; i < arrayDeUsuarios.length; i++) {
+//             if (arrayDeUsuarios[i].nombreDeUsuario === usuarioIinicioSesion.nombreDeUsuario) {
+//                 arrayDeUsuarios[i].contraseña=input.value;//modifico el array de usuarios luego tengo que cargarlo
+//                 usuarioIinicioSesion.contraseña=input.value;
+//                 contraseñaLugar=input.value;
+//                 console.log(contraseñaLugar);
+//                 contraseniaError.classList.remove("errorOn");
+//                 contraseniaError.classList.add("errorOculto");
+//                 break; // Salir del bucle una vez encontrado y modificado
+//             }
+//             else{
+//                 contraseñaLugar=null;
+//                 console.log(contraseñaLugar);
+//                 contraseniaError.classList.remove("errorOculto");
+//                 contraseniaError.classList.add("errorOn");
+
+//             }
+//         }
+        
+        
+//     }
+//     else{
+//         contraseñaLugar=null;
+//         console.log(contraseñaLugar);
+       
+        
+//     }
+// }
 function verificarContasenia2(e){
-    const input =e.target;
+    let input =e.target;
     if(contraseniaRespaldo===input.value){
-        for (let i = 0; i < arrayDeUsuarios.length; i++) {
-            if (arrayDeUsuarios[i].nombreDeUsuario === usuarioIinicioSesion.nombreDeUsuario) {
-                arrayDeUsuarios[i].contraseña=input.value;//modifico el array de usuarios luego tengo que cargarlo
+        if(arrayDeUsuarios[indiceUsuario].nombreDeUsuario===usuarioIinicioSesion.nombreDeUsuario){
+            arrayDeUsuarios[indiceUsuario].contraseña=input.value;//modifico el array de usuarios luego tengo que cargarlo
                 usuarioIinicioSesion.contraseña=input.value;
                 contraseñaLugar=input.value;
                 console.log(contraseñaLugar);
+                contraseniaError.classList.remove("errorOculto")
                 contraseniaError.classList.remove("errorOn");
                 contraseniaError.classList.add("errorOculto");
-                break; // Salir del bucle una vez encontrado y modificado
-            }
-            else{
-                contraseñaLugar=null;
-                console.log(contraseñaLugar);
-                contraseniaError.classList.remove("errorOculto");
-                contraseniaError.classList.add("errorOn");
+        }else{
+            contraseñaLugar=null;
+            console.log(contraseñaLugar);
+            contraseniaError.classList.remove("errorOculto");
+            contraseniaError.classList.add("errorOn");
 
-            }
         }
-        
-        
     }
     else{
         contraseñaLugar=null;
         console.log(contraseñaLugar);
-       
-        
+        contraseniaError.classList.remove("errorOculto");
+        contraseniaError.classList.add("errorOn");
+
     }
 }
+
+
+
+
 function verificarTarjeta(e) {
     const regexTarjeta = /^\d{16,19}$/;
     const input = e.target.value;
