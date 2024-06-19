@@ -13,10 +13,11 @@ let contraseñaLugar=null;
 let contraseniaError=document.querySelector("#contrasenia2Error")
 let primeraContraseña=document.querySelector("#primeraContraseña");
 let segundaContraseña=document.querySelector("#segundaContraseña");
-let enviarDatos=document.querySelector("#enviarDatos");
+let enviarDatosInput=document.querySelector("#enviarDatos");
 let tarjetaError=document.querySelector("#tarjetaError");
 let pagoFacil=document.querySelector("#pagoFacil");
-let rapiPago=document.querySelector("#rapipago")
+let rapiPago=document.querySelector("#rapipago");
+let cambiosPerfil=document.querySelector("#cambiosPerfil");
 
 let indiceUsuario = arrayDeUsuarios.findIndex(usuario => usuario.nombreDeUsuario === usuarioIinicioSesion.nombreDeUsuario);
 const metodoPagoRadios = document.querySelectorAll('input[name="payment"]');
@@ -140,20 +141,25 @@ function verificarDigitos(e){
     }
     
 }
+let cuponPagoCheked=false;
 function guardarCuponDePago(e) {
     const input = e.target;
     if (input.id === "pagoFacil") {
         if (input.checked) {
             arrayDeUsuarios[indiceUsuario].pagoFacil=input.value;
+            cuponPagoCheked=true;
         } else {
             arrayDeUsuarios[indiceUsuario].pagoFacil= "";
+            cuponPagoCheked=false;
         }
         console.log( arrayDeUsuarios[indiceUsuario].pagoFacil);
     } else if (input.id === "rapipago") {
         if (input.checked) {
             arrayDeUsuarios[indiceUsuario].rapiPago= input.value;
+            cuponPagoCheked=true;
         } else {
             arrayDeUsuarios[indiceUsuario].rapiPago = "";
+            cuponPagoCheked=false;
         }
         console.log( arrayDeUsuarios[indiceUsuario].rapiPago);
     }
@@ -165,24 +171,45 @@ function verificarMetodoDePagoSeleccionado() {
     metodoPagoRadios.forEach((radio) => {
         if (radio.checked) {
             metodoSeleccionado = true;
-            arrayDeUsuarios[indiceUsuario].MetodoDePago = radio.value;
+            arrayDeUsuarios[indiceUsuario].metodoDePago = radio.value;
         }
     });
 
     // Si no hay ningún método de pago seleccionado, selecciona el primero por defecto
     if (!metodoSeleccionado && metodoPagoRadios.length > 0) {
         metodoPagoRadios[0].checked = true;
-        arrayDeUsuarios[indiceUsuario].MetodoDePago = metodoPagoRadios[0].value;
+        arrayDeUsuarios[indiceUsuario].metodoDePago = metodoPagoRadios[0].value;
     }
 }
 
 function actualizarMetodoDePagoSeleccionado(e) {
     const input = e.target;
     if (input.name === "payment") {
-        arrayDeUsuarios[indiceUsuario].MetodoDePago = input.value;
+        arrayDeUsuarios[indiceUsuario].metodoDePago = input.value;
         console.log(input.value)
     }
 }
+
+function enviarDatos() {
+    if (contraseniaRespaldo !== null && contraseñaLugar !== null && arrayDeUsuarios[indiceUsuario].metodoDePago !== null && cuponPagoCheked !== false) {
+        cambiosPerfil.disabled = false;
+    } else {
+        cambiosPerfil.disabled = true;
+     
+    }
+}
+function chequearValidacion(e) {
+    if (cambiosPerfil.disabled) {
+        e.preventDefault();
+    }
+}
+function subirDatosActualizadosLocalStorage(){
+    localStorage.setItem("usuarios",JSON.stringify(arrayDeUsuarios));
+    localStorage.setItem("usaurioInicioSesion",JSON.stringify(usuarioIinicioSesion));
+
+}
+cuponDePago();
+cargarDatos();
 metodoPagoRadios.forEach((radio) => {
     radio.addEventListener("change", actualizarMetodoDePagoSeleccionado);
 });
@@ -192,6 +219,18 @@ codigo.addEventListener("input",verificarDigitos);
 tarjeta.addEventListener("input",verificarTarjeta);
 primeraContraseña.addEventListener("input",verificarContasenia);
 segundaContraseña.addEventListener("input",verificarContasenia2);
+// document.querySelector("#enviarDatos").addEventListener("click", (e) => {
+//     if (cambiosPerfil.disabled) {
+//         e.preventDefault();
+//     }
+// });
+cambiosPerfil.addEventListener("click",subirDatosActualizadosLocalStorage);
+enviarDatosInput.addEventListener("click",chequearValidacion);
+pagoFacil.addEventListener("change",enviarDatos);
+rapiPago.addEventListener("change",enviarDatos);
+codigo.addEventListener("input",enviarDatos);
+tarjeta.addEventListener("input",enviarDatos);
+primeraContraseña.addEventListener("input",enviarDatos);
+segundaContraseña.addEventListener("input",enviarDatos);
 
-cuponDePago();
-cargarDatos();
+

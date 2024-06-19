@@ -44,7 +44,7 @@ function detectarContrasenia(e){
 
 }
 function validarBoton(){
-    if(nombreUsuario!==null && contrasenia!==null && usuarioConectado===false){
+    if(nombreUsuario!==null && contrasenia!==null ){
         confirmarInput.disabled=false;
     }else{
         confirmarInput.disabled=true;

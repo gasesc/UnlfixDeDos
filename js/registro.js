@@ -45,7 +45,8 @@ const usuario = {
     tarjeta:"",
     rapiPago:"",
     pagoFacil:"",
-    tresDigitos:""
+    tresDigitos:"",
+    metodoDePago:""
 };
 
 function verificarNombre(e) {
