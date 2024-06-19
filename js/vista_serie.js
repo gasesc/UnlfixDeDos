@@ -10,7 +10,7 @@ function onYouTubeIframeAPIReady() {
         const detalleSerieStr = localStorage.getItem("detalleSerie");
         if (detalleSerieStr) {
             const detalleParseado = JSON.parse(detalleSerieStr);
-            const serie = detalleseries.find(p => p.id == detalleParseado.id);
+            const serie = detallesSeries.find(p => p.id == detalleParseado.id);
             if (serie) {
                 const videoId = extractVideoId(serie.url_youtube);
                 player = new YT.Player('iframe_link', {
@@ -52,39 +52,39 @@ function changeVideo(videoId) {
 const detallesSerie = [
     {
         "id": 1,
-        "descripcion_corta": "John Wick regresa de nuevo pero con una recompensa sobre su cabeza que persigue unos mercenarios. Tras asesinar a uno de los miembros de su gremio, Wick es expulsado y se convierte en el foco de atención de todos los sicarios de la organización.",
-        "url_youtube": "https://www.youtube.com/watch?v=M7XM597XO94",
-        "background_img": "../img/john-wick-4.jpg"
+        "descripcion_corta": "DRAGON BALL Z",
+        "url_youtube": "https://www.youtube.com/watch?v=cU6aAJWRQvU",
+        "background_img": "./img/PeliYSeries/dragon ball.jpg"
     },
     {
         "id": 2,
-        "descripcion_corta": "Cap america winter.",
+        "descripcion_corta": "Rick y morty.",
         "url_youtube": "https://www.youtube.com/watch?v=vNRoTY_Laiw",
-        "background_img": "../img/PeliYSeries/capamericawinterback.jpg"
+        "background_img": "./img/PeliYSeries/rickymorty.jpg"
     },
     {
         "id": 3,
-        "descripcion_corta": "Cap Marvel.",
-        "url_youtube": "https://www.youtube.com/watch?v=Z1BCujX3pw8",
-        "background_img": "../img/PeliYSeries/capmarvelback.jpg"
+        "descripcion_corta": "Los simspon.",
+        "url_youtube": "https://www.youtube.com/watch?v=-pdCvr2sQw4",
+        "background_img": "./img/PeliYSeries/simpson.jpg"
     },
     {
         "id": 4,
-        "descripcion_corta": "Cap america civil war.",
-        "url_youtube": "https://www.youtube.com/watch?v=-ByYxIjmLsI",
-        "background_img": "../img/PeliYSeries/civilwar.jpg"
+        "descripcion_corta": "Xmen 97.",
+        "url_youtube": "https://www.youtube.com/watch?v=o-dnfm7cDtU",
+        "background_img": "./img/PeliYSeries/xmen97back.jpeg"
     },
     {
         "id": 5,
-        "descripcion_corta": "DeadPool.",
-        "url_youtube": "https://www.youtube.com/watch?v=0JnRdfiUMa8",
-        "background_img": "../img/PeliYSeries/deadpoolback.jpg"
+        "descripcion_corta": "Fallout.",
+        "url_youtube": "https://www.youtube.com/watch?v=GExflKHU3VE",
+        "background_img": "./img/PeliYSeries/fallout.jpg"
     },
     {
         "id": 6,
-        "descripcion_corta": "DrStrange.",
-        "url_youtube": "https://www.youtube.com/watch?v=DYyMsYgZDJM",
-        "background_img": "../img/PeliYSeries/strangeback.jpg"
+        "descripcion_corta": "The continental.",
+        "url_youtube": "https://www.youtube.com/watch?v=Rxry6_88tXw",
+        "background_img": "./img/PeliYSeries/continentalback.jpeg"
     }
 ];
 
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const detalleParseado = JSON.parse(detalleSerieStr);
         let serie;
         try {
-            serie = detallesSeries.find(p => p.id == detalleParseado.id);
+            serie = detallesSerie.find(p => p.id == detalleParseado.id);
         } catch (error) {
             console.log(error);
         }

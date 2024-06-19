@@ -60,9 +60,9 @@
        
           <article class="datos_trailer">
             <div class="descripcion_pelicula">
-                <p>La trama de Dragon Ball Z se centra en la vida adulta de Son Goku, quien tendrá que defender la tierra de los numerosos villanos que amenazan con destruirla</p>
+                <p id="descripcion_corta"></p>
             </div>
-            <h1>Dragon ball Z</h1>
+            <h1 id="titulo"></h1>
             <span class="material-symbols-outlined">
               hd
               </span>
@@ -72,10 +72,8 @@
                 <span class="material-symbols-outlined">
                   closed_caption
                   </span>      
-            <div class="contenedor_video"><iframe width="560" height="315" src="https://www.youtube.com/embed/817-Dwug3GM?si=vZ6sOH21KZR2cezx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <a href="https://www.youtube.com/watch?v=M7XM597XO94" class="trailer">ver trailer</a>
-            <a href="https://www.youtube.com/watch?v=M7XM597XO94" class="ver">ver ahora</a>
+                  <div class="contenedor_video"><div id="iframe_link"></div></div>
+                  <a href="" class="ver" id="ver_ahora">ver ahora</a>
             <form action="">
               <select name="temproada" id="temporada">
                 <option value="temporada1">temporada1</option>
@@ -91,6 +89,78 @@
         </section>
 
         <section class="contenedor2">
+          <h2>Series recomendadas</h2>
+          <div class="gran_contenedor">
+              <div class="peliculas_recomendadas">
+                  <a href="#" data-id="1" onclick="mostrarDetalleSerie(this)">
+                      <img src="img/PeliYSeries/shogun.jpg" alt="">
+                  </a>
+              </div>
+              <div class="peliculas_recomendadas">
+                  <a href="detalle.html" data-id="2" onclick="mostrarDetalleSerie(this)">
+                      <img src="img/PeliYSeries/rick y morty.jpg" alt="">
+                  </a>
+              </div>
+              <div class="peliculas_recomendadas">
+                  <a href="detalle.html" data-id="3" onclick="mostrarDetalleSerie(this)">
+                      <img src="img/PeliYSeries/los simpsons.webp" alt="">
+                  </a>
+              </div>
+              <div class="peliculas_recomendadas">
+                  <a href="detalle.html" data-id="4" onclick="mostrarDetalleSerie(this)">
+                      <img src="img/PeliYSeries/continental.webp" alt="">
+                  </a>
+              </div>
+              <div class="peliculas_recomendadas">
+                  <a href="detalle.html" data-id="5" onclick="mostrarDetalleSerie(this)">
+                      <img src="img/PeliYSeries/twd.jpg" alt="">
+                  </a>
+              </div>
+              <div class="peliculas_recomendadas">
+                  <a href="detalle.html" data-id="6" onclick="mostrarDetalleSerie(this)">
+                      <img src="img/PeliYSeries/invencible.jpg" alt="">
+                  </a>
+              </div>
+              <div class="peliculas_recomendadas">
+                  <a href="detalle.html" data-id="7" onclick="mostrarDetalleSerie(this)">
+                      <img src="img/PeliYSeries/fallout.webp" alt="">
+                  </a>
+              </div>
+              <div class="peliculas_recomendadas">
+                  <a href="detalle.html" data-id="8" onclick="mostrarDetalleSerie(this)">
+                      <img src="img/PeliYSeries/xmen.png" alt="">
+                  </a>
+              </div>
+          </div>
+      </section>
+  </main>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+        <!--  <section class="contenedor2">
           <h2>Series recomendadas</h2>
           <div class="gran_contenedor">
             <div class="peliculas_recomendadas"><a href=""><img src="img/PeliYSeries/shogun.jpg" alt=""></a></div>
@@ -153,5 +223,7 @@
   
       </script>
    -->
+   <script src="./js/vista_serie.js"></script>
+   <script src = "./js/pantalla_principal.js"></script>
 </body>
 </html>
