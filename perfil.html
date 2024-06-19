@@ -31,10 +31,12 @@
                     <label><input type="radio" name="payment" value="credit-card"> Tarjeta de crédito</label>
                     <input type="text" placeholder="Número de tarjeta" id="tarjeta">
                     <input type="text" placeholder="XXX" id="codigo">
+                    <p class="errorOculto" id="tarjetaError">digite un numero de tarjeta correcto</p>
+                    <p class="errorOculto" id="cifraError">digite 3 digitos distintos de cero</p>
 
                     <label><input type="radio" name="payment" value="coupon"> Cupón de pago</label>
-                    <label><input type="checkbox" name="coupon-method" value="1"> Pago Fácil</label>
-                    <label><input type="checkbox" name="coupon-method" value="2"> Rapi Pago</label>
+                    <label><input type="checkbox" name="coupon-method" value="1" id="pagoFacil"> Pago Fácil</label>
+                    <label><input type="checkbox" name="coupon-method" value="2" id="rapipago"> Rapi Pago</label>
 
                     <label><input type="radio" name="payment" value="bank-transfer"> Transferencia bancaria</label>
                     <div class="cbu">CBU: 1234567890123456789012</div>
@@ -42,7 +44,7 @@
             </div>
         </div>
         <div class="row buttons">
-            <a href="pantalla_principal.html" class="save" >Guardar cambios</a>
+            <a href="pantalla_principal.html" class="save" id="enviarDatos" >Guardar cambios</a>
             <a href="login.html" class="cancel" >Cancelar suscripción</a>
            
         </div>
