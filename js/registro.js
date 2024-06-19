@@ -23,18 +23,18 @@ let arrayDeUsuarios=JSON.parse(localStorage.getItem("usuarios"));
 
 const USUARIOS = 'usuarios';
 
-// Función para obtener el array de usuarios del localStorage
+//obtengo valor de localStorage
 function getUsersFromLocalStorage() {
     const usuariosString = localStorage.getItem(USUARIOS);
     if (usuariosString) {
         return JSON.parse(usuariosString);
     } else {
-        // Si no hay ningún valor en localStorage, devolver un array vacío
+       
         return [];
     }
 }
 
-// Ejemplo de cómo usar la función para obtener los usuarios
+
 const usuariosArray = getUsersFromLocalStorage();
 
 const usuario = {
@@ -68,7 +68,7 @@ function verificarNombre(e) {
 }
 function verificarApellido(e) {
     const regex = /^[a-zA-Z]+$/;
-    const input = e.target; // El elemento que disparó el evento
+    const input = e.target; 
     if (!regex.test(input.value)) {
 
         apellidoError.classList.remove("errorOculto");
@@ -167,12 +167,12 @@ function verificarTarjeta(e) {
     } else {
         const arrayNumeros = input.split('').map(Number);
         
-        // Sumar los números del array
+       
         for (let i = 0; i < arrayNumeros.length - 1; i++) {
             suma += arrayNumeros[i];
         }
 
-        // Verificar las condiciones y actualizar el estado del error
+        
         if (suma % 2 !== 0 && (arrayNumeros.length - 1) % 2 === 0) {
             tarjetaError.classList.remove("errorOn");
             tarjetaError.classList.add("errorOculto");
@@ -250,13 +250,13 @@ function verificarTilde(){
 function enviarDatos() {
     const check = verificarTilde();
 
-    // Verificar si todos los campos necesarios están llenos y las condiciones están cumplidas
+    // Verificar si todos los campos necesarios están llenos y las condiciones 
     if (usuario.nombre !== null && usuario.apellido !== null && usuario.contraseña !== null &&
         usuario.nombreDeUsuario !== null && usuario.tarjeta !== null && usuario.tresDigitos !== null &&
         check === true) {
-        registrarseInput.disabled = false; // Habilitar el botón de registrarse
+        registrarseInput.disabled = false; // Habilito el botón de registrarse
     } else {
-        registrarseInput.disabled = true; // Deshabilitar el botón de registrarse
+        registrarseInput.disabled = true; // Deshabilito el botón de registrarse
     }
 }
 function subirUsuario(){
