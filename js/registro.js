@@ -8,6 +8,7 @@ let emailError=document.querySelector("#emailError");
 let usuarioError=document.querySelector("#usuarioError");
 let contraseniaInput=document.querySelector("#contrasenia");
 let contraseniaInput2=document.querySelector("#contrasenia2");
+let contraseniaError1=document.querySelector("#contraseniaError")
 let contraseniaError=document.querySelector("#contrasenia2Error")
 let tarjetaInput=document.querySelector("#numero_tarjeta");
 let tarjetaError=document.querySelector("#tarjetaError");
@@ -118,22 +119,35 @@ function verificarUsuario(e){
 
 }
 function verificarContasenia(e){
-    const input =e.target;
-    contraseniaRespaldo=input.value;
+    const regexContraseña = /^(?=(?:[^A-Za-z]*[A-Za-z]){2})(?=(?:[^0-9]*[0-9]){2})(?=(?:[^!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]){2})[A-Za-z0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]{8,}$/;
+    const input =e.target.value;
+    if(!regexContraseña.test(input)){
+        contraseniaError1.classList.remove("errorOculto");
+        contraseniaError1.classList.add("errorOn")
+        console.log("no cumple con los caracteres");
+    }else{
+        contraseniaError1.classList.remove("errorOn");
+        contraseniaError1.classList.add("errorOculto")
+        contraseniaRespaldo=input;
+        console.log(contraseniaRespaldo);
+    }
+
+    
+
 
 }
 function verificarContasenia2(e){
     const input =e.target;
     if(contraseniaRespaldo===input.value){
         usuario.contraseña=input.target;
-        contraseniaError.classList.remove("#errorOn");
+        contraseniaError.classList.remove("errorOn");
         contraseniaError.classList.add("errorOculto");
         usuario.contraseña=input.value;
         console.log(usuario.contraseña);
     }
     else{
         contraseniaError.classList.remove("errorOculto");
-        contraseniaError.classList.add("#errorOn");
+        contraseniaError.classList.add("errorOn");
         usuario.contraseña=null;
         console.log(usuario.contraseña);
     }
@@ -202,13 +216,19 @@ function verificarDigitos(e){
         if(arrayNumeros[0]===0 && arrayNumeros[1]===0 && arrayNumeros[2]===0){
             usuario.tresDigitos=null;
             console.log(usuario.tresDigitos)
+            cifraError.classList.remove("errorOculto");
+            cifraError.classList.add("errorOn");
         }else{
             usuario.tresDigitos=input;
             console.log(usuario.tresDigitos)
+            cifraError.classList.remove("errorOn");
+            cifraError.classList.add("errorOculto");
         }
         
     }else{
         console.log("digite un numero valido")
+        cifraError.classList.remove("errorOculto");
+        cifraError.classList.add("errorOn");
     }
     
 }
