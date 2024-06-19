@@ -57,7 +57,7 @@
       <span class="fontPage">Buscar</span>
     </div>
     <div class="contenedor_busqueda">
-      <input class="buscador" type="text" placeholder="Busca tus peliculas o series favoritas" />  
+      <input class="buscador" id= "search" type="text" placeholder="Busca tus peliculas o series favoritas" />  
       <button class="boton_busqueda"><i class="fa-solid fa-magnifying-glass" style="color: #260028;"></i></button>
     </div>
 
@@ -66,34 +66,33 @@
     </div>
 
     <div class="grid-peliculas">
-      <a href="vista_pelicula.html">     
-        <div class="box" title="Peli1">
+      <a href="#" data-id="1" onclick="mostrarDetallePelicula(this)" class="search_filter">     
+        <div class="box" title="Jhon Wick 4">
           <p>
-            <img src="./img/PeliYSeries/johnwick4.webp" href="vista_pelicula.html"/>
+            <img src="./img/PeliYSeries/johnwick4.webp"/>
           </p>
         </div>
       </a> 
-      <a href="vista_pelicula.html">  
-          <div class="box" href="/" title="Peli2">
-            <p>
-              <img src="./img/PeliYSeries/cap_america.jpg"/>
-            </p>
-          </div>
-      </a> 
-      <a href="vista_pelicula.html">  
-          <div class="box" href="/" title="Peli3">
-            <p>
-              <img src="./img/PeliYSeries/capmarvel.webp"/>
-            </p>
-          </div>
-      </a>   
-      <a href="vista_pelicula.html">  
-        <div class="box" href="/" title="Peli3">
+      <a href="#" data-id="2" onclick="mostrarDetallePelicula(this)" class="search_filter">  
+        <div class="box"  title="Capitan America y El Soldado del Invierno">
+          <p>
+            <img src="./img/PeliYSeries/cap_america.jpg"/>
+          </p>
+        </div>
+    </a> 
+    <a href="#" data-id="3" onclick="mostrarDetallePelicula(this)" class="search_filter">  
+      <div class="box"  title="Capitana Marvel">
+        <p>
+          <img src="./img/PeliYSeries/capmarvel.webp"/>
+        </p>
+      </div>
+      <a href="#" data-id="4" onclick="mostrarDetallePelicula(this)" class="search_filter">  
+        <div class="box" href="/" title="Capitan America Civil War">
           <p>
             <img src="./img/PeliYSeries/civilwar.webp"/>
           </p>
         </div>
-    </a>  
+    </a> 
     </div>
 
     <div class="texto-series">
@@ -101,35 +100,41 @@
     </div>
 
     <div class="grid-series">
-      <a href="vista_serie.html">     
-        <div class="box" title="Peli1">
+      <a href="#" data-id="1" onclick="mostrarDetalleSerie(this)" class="search_filter">     
+        <div class="box" title="Dragon Ball Z">
           <p>
             <img src="./img/PeliYSeries/dragon ball.jpg"/>
           </p>
         </div>
       </a> 
-      <a href="vista_serie.html">  
-          <div class="box" href="/" title="Peli2">
+      <a href="#" data-id="2" onclick="mostrarDetalleSerie(this)" class="search_filter">     
+        <div class="box" title="Rick y morty">
+          <p>
+            <img src="./img/PeliYSeries/rick y morty.jpg">
+          </p>
+        </div>
+      </a> 
+      <a href="#" data-id="3" onclick="mostrarDetalleSerie(this)" class="search_filter">  
+          <div class="box"  title="Los simpsons">
             <p>
-              <img src="./img/PeliYSeries/fallout.webp"/>
+              <img src="./img/PeliYSeries/los simpsons.webp"/>
             </p>
           </div>
       </a> 
-      <a href="vista_serie.html">  
-          <div class="box" href="/" title="Peli3">
+      <a href="#" data-id="4" onclick="mostrarDetalleSerie(this)" class="search_filter">  
+          <div class="box"  title="Xmen">
             <p>
               <img src="./img/PeliYSeries/xmen.png"/>
             </p>
           </div>
-      </a>   
-      <a href="vista_serie.html">  
-        <div class="box" href="/" title="Peli3">
-          <p>
-            <img src="./img/PeliYSeries/twd.jpg"/>
-          </p>
-        </div>
-    </a>  
+      </a>  
+    </div>
+    <div id="no-results" class="no-results">
+      <p>No se encontraron películas o series con ese nombre</p>
     </div>
   </div>
+  <script src="./js/pantalla_principal.js"></script>
+  <script src="./js/pantalla_busqueda.js"></script>
+  
 </body>
 </html>
