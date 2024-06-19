@@ -7,7 +7,8 @@ const errorUsuario=document.querySelector("#errorUsuario")
 const errorEmail=document.querySelector("#errorEmail")
 let emailInput=document.querySelector("#email");
 let usuarioInput=document.querySelector("#username");
-
+let emailEncontrado=false;
+let usuarioEncontrado=false;
 function validarEmail(e){
     let inputEmail=e.target.value;
     if(usuarioEstado!==true){
@@ -15,11 +16,11 @@ function validarEmail(e){
              indiceUsuario = arrayDeUsuarios.findIndex(usuario => usuario.email === inputEmail);
             errorEmail.classList.remove("errorOn");
             errorEmail.classList.add("errorOculto")
-            return true;
+            emailEncontrado=true;
         }else{
             errorEmail.classList.remove("errorOculto");
             errorEmail.classList.add("errorOn")
-            return false;
+            emailEncontrado=false;
         }
     
 
@@ -32,16 +33,25 @@ function validarUsuario(e){
             errorUsuario.classList.remove("errorOn");
             errorUsuario.classList.add("errorOculto")
             console.log(arrayDeUsuarios[indiceUsuario].nombreDeUsuario);
-            return true;
+            usuarioEncontrado=true;
         }else{
             errorUsuario.classList.remove("errorOculto");
             errorUsuario.classList.add("errorOn")
             console.log("no encuentro nada");
-            return false;
+          usuarioEncontrado=false;
         }
     
 
     }
 }
+function validarDatosEncontrados(){
+    if(usuarioEncontrado===true && emailEncontrado===true){
+        enviar.disabled=false;
+    }else{
+        enviar.disable=true;
+    }
+}
 emailInput.addEventListener("input",validarEmail);
 usuarioInput.addEventListener("input",validarUsuario);
+emailInput.addEventListener("input",validarDatosEncontrados);
+usuarioInput.addEventListener("input",validarDatosEncontrados);
