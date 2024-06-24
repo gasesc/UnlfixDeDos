@@ -245,7 +245,7 @@ function actualizarMetodoDePagoSeleccionado(e) {
 }
 
 function enviarDatos() {
-    if (contraseniaRespaldo !== null && contraseñaLugar !== null && arrayDeUsuarios[indiceUsuario].metodoDePago !== null && cuponPagoCheked !== false) {
+    if (contraseniaRespaldo !== null && contraseñaLugar !== null || arrayDeUsuarios[indiceUsuario].metodoDePago !== null && cuponPagoCheked !== false) {
         cambiosPerfil.disabled = false;
     } else {
         cambiosPerfil.disabled = true;

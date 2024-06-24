@@ -20,6 +20,8 @@ let codigoSeguridadInput=document.querySelector("#codigo_seguridad");
 let registrarseInput=document.querySelector("#registrarse")
 let contraseniaRespaldo=null;
 let arrayDeUsuarios=JSON.parse(localStorage.getItem("usuarios"));
+let mensajeParaSeguir=document.querySelector("#mensajeParaSeguir")
+let metodoDePagoInput=document.getElementsByName("radio_check");
 
 const USUARIOS = 'usuarios';
 
@@ -43,10 +45,10 @@ const usuario = {
     email: "",
     nombreDeUsuario: "",
     contraseña: "",
-    tarjeta:"",
+    tarjeta: null,
     rapiPago:"",
     pagoFacil:"",
-    tresDigitos:"",
+    tresDigitos:null,
     metodoDePago:""
 };
 
@@ -191,6 +193,29 @@ function verificarTarjeta(e) {
         }
     }
 }
+function validarMetodoDePago(){
+    const input =metodoDePagoInput;
+
+    for( const tildado of input){
+        if(tildado.checked){
+            usuario.metodoDePago=tildado.value;
+            console.log(usuario.metodoDePago);
+            prenderOApagarCupones();
+            break;
+        }
+    }
+}
+function prenderOApagarCupones(){
+    if(usuario.metodoDePago==="cupon"){
+       pagoFacil.disabled=false;
+       rapiPago.disabled=false;
+
+    }else{
+        pagoFacil.disabled=true;
+        rapiPago.disabled=true;
+    }
+}
+
 function guardarCuponDePago(e) {
     const input = e.target;
     if (input.id === "pagoFacil") {
@@ -252,10 +277,14 @@ function enviarDatos() {
 
     // Verificar si todos los campos necesarios están llenos y las condiciones 
     if (usuario.nombre !== null && usuario.apellido !== null && usuario.contraseña !== null &&
-        usuario.nombreDeUsuario !== null && usuario.tarjeta !== null && usuario.tresDigitos !== null &&
-        check === true) {
+        usuario.nombreDeUsuario !== null && usuario.tarjeta !== null && usuario.tresDigitos !== null /*&&
+        check === true*/) {
+            mensajeParaSeguir.classList.remove("errorOn")
+            mensajeParaSeguir.classList.add("errorOculto")
         registrarseInput.disabled = false; // Habilito el botón de registrarse
     } else {
+        mensajeParaSeguir.classList.remove("errorOculto")
+         mensajeParaSeguir.classList.add("errorOn")
         registrarseInput.disabled = true; // Deshabilito el botón de registrarse
     }
 }
@@ -264,6 +293,10 @@ function subirUsuario(){
     localStorage.setItem(USUARIOS,JSON.stringify(usuariosArray));
 }
 
+Array.from(metodoDePagoInput).forEach(metodo=>{
+    metodo.addEventListener("change",validarMetodoDePago);
+  
+})
 codigoSeguridadInput.addEventListener("input",verificarDigitos);
 pagoFacil.addEventListener("change",guardarCuponDePago);
 rapiPago.addEventListener("change",guardarCuponDePago);

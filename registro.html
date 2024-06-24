@@ -23,7 +23,7 @@
               placeholder="Ingrese su nombre"
               required
             />
-            <p class="errorOculto" id="nombreError">digite un nombre correcto</p>
+            <p class="errorOculto" id="nombreError">El nombre solo acepta letras</p>
             <label for="apellido">Apellido:</label>
             <input
               id="apellido"
@@ -31,7 +31,7 @@
               placeholder="Ingrese su apellido"
               required
             />
-            <p class="errorOculto" id="apellidoError">digite un apellido correcto</p>
+            <p class="errorOculto" id="apellidoError">El apellido solo acepta letras</p>
 
             <label for="email">Correo Electronico:</label>
             <input
@@ -40,7 +40,7 @@
               placeholder="Ingrese su correo"
               required
             />
-            <p class="errorOculto" id="emailError">digite un email correcto</p>
+            <p class="errorOculto" id="emailError">digite un email correcto ej: mailEjemplo@gmai.com</p>
 
             
             <label for="nombreUsuario">ingrese nombre de usuario</label>
@@ -54,7 +54,8 @@
               placeholder="Ingrese una contraseña"
               required
             />
-            <p class="errorOculto" id="contraseniaError">digite una contraseña correcto</p>
+            <p class="errorOculto" id="contraseniaError">la contraseña admite 8 caracteres ( mínimo 2 letras, 2 números y 2 caracteres especiales)
+            </p>
 
             <label for="contrasenia2">Confirmar contraseña:</label>
             <input
@@ -63,14 +64,14 @@
               placeholder="Ingrese una contraseña"
               required
             />
-            <p class="errorOculto" id="contrasenia2Error">digite una contraseña correcto</p>
+            <p class="errorOculto" id="contrasenia2Error">Las contraseñas no coiciden</p>
 
           </div>
           <div class="metodos_de_pago">
             <h3>Metodos de pago</h3>
             <div class="fila_tarjeta">
               <label for="tarjeta">Tarjeta de credito</label>
-              <input id="radio_tarjeta" type="radio" name="radio_check" />
+              <input id="radio_tarjeta" type="radio" name="radio_check" value="tarjeta"/>
               <input
                 type="number"
                 placeholder="Numero de tarjeta"
@@ -89,13 +90,13 @@
             </div>
             <div class="fila_cupon">
               <label for="cupon_de_pago">Cupon de pago</label>
-              <input id="radio_cupon" type="radio" name="radio_check" />
-              <input type="checkbox" value="1" id="pagoFacil" name="cupon"/> Pago facil
-              <input type="checkbox" value="2" id="rapipago" name="cupon"/> Rapipago
+              <input id="radio_cupon" type="radio" name="radio_check"  value="cupon"/>
+              <input type="checkbox" value="1" id="pagoFacil" name="cupon" disabled /> Pago facil
+              <input type="checkbox" value="2" id="rapipago" name="cupon" disabled/> Rapipago
             </div>
             <div class="fila_cbu">
               <label for="transferencia"> Transferencia bancaria</label>
-              <input type="radio" id="radio_transferencia" name="radio_check" />
+              <input type="radio" id="radio_transferencia" name="radio_check" value="transferencia"/>
               <h6>CBU: 2183909411100018971375</h6>
             </div>
           </div>
@@ -108,6 +109,8 @@
                   value="Cancelar"
                 />
             </a>
+            <p class="errorOculto" id="mensajeParaSeguir">para poder avanzar el nombre apellido email contraseña tarjeta y codigo de 3 numeros tienen q estar completos
+            </p>
             <a href="./login.html">
                 <input class="boton" type="submit" value="Registrarse" id="registrarse" disabled/>
             </a>
