@@ -206,7 +206,7 @@ function validarMetodoDePago(){
     }
 }
 function prenderOApagarCupones(){
-    if(usuario.metodoDePago==="cupon"){
+    if(usuario.metodoDePago==="coupon"){
        pagoFacil.disabled=false;
        rapiPago.disabled=false;
 

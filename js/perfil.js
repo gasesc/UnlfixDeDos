@@ -6,10 +6,10 @@ const nombre =document.querySelector("#nombre");
 const tarjeta =document.querySelector("#tarjeta")
 const codigo=document.querySelector("#codigo");
 let checkboxes = document.querySelectorAll('input[name="coupon-method"]');
+let radioButon= document.querySelectorAll("payment");
 let valor;
 let email=document.querySelector("#email");
-let contraseniaRespaldo=null;
-let contraseñaLugar=null;
+let cuponDePagoRadioButon=document.querySelector("#cuponesDePago");
 let contraseniaError=document.querySelector("#contrasenia2Error")
 let primeraContraseña=document.querySelector("#primeraContraseña");
 let segundaContraseña=document.querySelector("#segundaContraseña");
@@ -24,7 +24,10 @@ let contraseniaError1=document.querySelector("#contraseniaError")
 let indiceUsuario = arrayDeUsuarios.findIndex(usuario => usuario.nombreDeUsuario === usuarioIinicioSesion.nombreDeUsuario);
 const metodoPagoRadios = document.querySelectorAll('input[name="payment"]');
 
-
+let contraseniaRespaldo=null;
+let contraseñaLugar=null;
+let tarjetaRespaldo=null;
+let digitosRespaldo=null;
 
 
 function cuponDePago(){
@@ -34,6 +37,34 @@ function cuponDePago(){
         valor=usuarioIinicioSesion.rapiPago;
     }
 }
+function recuperarMetodoDePago(){
+    if(usuarioEstado===true){
+       if(usuarioIinicioSesion.metodoDePago==="credit-card"){
+        
+        metodoPagoRadios.forEach((radio) => {
+            if (radio.value === "credit-card") {
+                radio.checked = true;
+            }
+        });
+    }
+    else if(usuarioIinicioSesion.metodoDePago==="coupon"){
+        metodoPagoRadios.forEach((radio) => {
+            if (radio.value === "coupon") {
+                radio.checked = true;
+            }
+        });
+    }
+    else if(usuarioIinicioSesion.metodoDePago==="bank-transfer"){
+        metodoPagoRadios.forEach((radio) => {
+            if (radio.value === "bank-transfer") {
+                radio.checked = true;
+            }
+        });
+    }
+}
+}
+recuperarMetodoDePago();
+
 function cargarDatos(){
     if(usuarioEstado===true){
         nombre.textContent=usuarioIinicioSesion.nombreDeUsuario;
@@ -69,43 +100,12 @@ function verificarContasenia(e){
 }
 
 
-// function verificarContasenia2(e){
-//     const input =e.target;
-//     if(contraseniaRespaldo===input.value){
-//         for (let i = 0; i < arrayDeUsuarios.length; i++) {
-//             if (arrayDeUsuarios[i].nombreDeUsuario === usuarioIinicioSesion.nombreDeUsuario) {
-//                 arrayDeUsuarios[i].contraseña=input.value;//modifico el array de usuarios luego tengo que cargarlo
-//                 usuarioIinicioSesion.contraseña=input.value;
-//                 contraseñaLugar=input.value;
-//                 console.log(contraseñaLugar);
-//                 contraseniaError.classList.remove("errorOn");
-//                 contraseniaError.classList.add("errorOculto");
-//                 break; // Salir del bucle una vez encontrado y modificado
-//             }
-//             else{
-//                 contraseñaLugar=null;
-//                 console.log(contraseñaLugar);
-//                 contraseniaError.classList.remove("errorOculto");
-//                 contraseniaError.classList.add("errorOn");
-
-//             }
-//         }
-        
-        
-//     }
-//     else{
-//         contraseñaLugar=null;
-//         console.log(contraseñaLugar);
-       
-        
-//     }
-// }
 function verificarContasenia2(e){
     let input =e.target;
     if(contraseniaRespaldo===input.value){
         if(arrayDeUsuarios[indiceUsuario].nombreDeUsuario===usuarioIinicioSesion.nombreDeUsuario){
             arrayDeUsuarios[indiceUsuario].contraseña=input.value;//modifico el array de usuarios luego tengo que cargarlo
-                usuarioIinicioSesion.contraseña=input.value;
+                 usuarioIinicioSesion.contraseña=input.value;
                 contraseñaLugar=input.value;
                 console.log(contraseñaLugar);
                 contraseniaError.classList.remove("errorOculto")
@@ -140,7 +140,6 @@ function verificarTarjeta(e) {
     if (!regexTarjeta.test(input)) {
         tarjetaError.classList.remove("errorOculto");
         tarjetaError.classList.add("errorOn");
-       
         console.log("no cumple con la condicion");
     } else {
         const arrayNumeros = input.split('').map(Number);
@@ -155,13 +154,13 @@ function verificarTarjeta(e) {
             tarjetaError.classList.remove("errorOn");
             tarjetaError.classList.add("errorOculto");
             arrayDeUsuarios[indiceUsuario].tarjeta=input;
-            usuarioIinicioSesion.tarjeta=input;
+             usuarioIinicioSesion.tarjeta=input;
             console.log( arrayDeUsuarios[indiceUsuario].tarjeta);
         } else if (suma % 2 === 0 && (arrayNumeros.length - 1) % 2 !== 0) {
             tarjetaError.classList.remove("errorOn");
             tarjetaError.classList.add("errorOculto");
-            arrayDeUsuarios[indiceUsuario].tarjeta=input;
-            usuarioIinicioSesion.tarjeta=input;
+             arrayDeUsuarios[indiceUsuario].tarjeta=input;
+             usuarioIinicioSesion.tarjeta=input;
             
             console.log( arrayDeUsuarios[indiceUsuario].tarjeta);
         } else {
@@ -196,45 +195,82 @@ function verificarDigitos(e){
     
 }
 let cuponPagoCheked=false;
+
+function validarMetodoDePago(){
+    const input =metodoPagoRadios;
+
+    for( const tildado of input){
+        if(tildado.checked){
+            arrayDeUsuarios[indiceUsuario].metodoDePago=tildado.value;
+            usuarioIinicioSesion.metodoDePago=tildado.value;
+            console.log(arrayDeUsuarios[indiceUsuario].metodoDePago);
+            prenderOApagarCupones();
+            break;
+        }
+    }
+}
+function prenderOApagarCupones(){
+    if(arrayDeUsuarios[indiceUsuario].metodoDePago==="coupon"){
+       pagoFacil.disabled=false;
+       rapiPago.disabled=false;
+
+    }else{
+        usuarioIinicioSesion.pagoFacil="";
+        usuarioIinicioSesion.rapiPago="";
+        arrayDeUsuarios[indiceUsuario].pagoFacil="";
+        arrayDeUsuarios[indiceUsuario].rapiPago="";
+        pagoFacil.disabled=true;
+        rapiPago.disabled=true;
+    }
+}
+
 function guardarCuponDePago(e) {
+    // if(cuponDePagoRadioButon.checked){
+        
+    // }
+
     const input = e.target;
     if (input.id === "pagoFacil") {
         if (input.checked) {
             arrayDeUsuarios[indiceUsuario].pagoFacil=input.value;
+            usuarioIinicioSesion.pagoFacil=input.value;
             cuponPagoCheked=true;
         } else {
             arrayDeUsuarios[indiceUsuario].pagoFacil= "";
+            usuarioIinicioSesion.pagoFacil="";
             cuponPagoCheked=false;
         }
         console.log( arrayDeUsuarios[indiceUsuario].pagoFacil);
     } else if (input.id === "rapipago") {
         if (input.checked) {
             arrayDeUsuarios[indiceUsuario].rapiPago= input.value;
+            usuarioIinicioSesion.rapiPago=input.value;
             cuponPagoCheked=true;
         } else {
             arrayDeUsuarios[indiceUsuario].rapiPago = "";
+            usuarioIinicioSesion.rapiPago="";
             cuponPagoCheked=false;
         }
         console.log( arrayDeUsuarios[indiceUsuario].rapiPago);
     }
 }
-function verificarMetodoDePagoSeleccionado() {
+// function verificarMetodoDePagoSeleccionado() {
     
-    let metodoSeleccionado = false;
+//     let metodoSeleccionado = false;
     
-    metodoPagoRadios.forEach((radio) => {
-        if (radio.checked) {
-            metodoSeleccionado = true;
-            arrayDeUsuarios[indiceUsuario].metodoDePago = radio.value;
-        }
-    });
+//     metodoPagoRadios.forEach((radio) => {
+//         if (radio.checked) {
+//             metodoSeleccionado = true;
+//             arrayDeUsuarios[indiceUsuario].metodoDePago = radio.value;
+//         }
+//     });
 
-    // Si no hay ningún método de pago seleccionado, selecciona el primero por defecto
-    if (!metodoSeleccionado && metodoPagoRadios.length > 0) {
-        metodoPagoRadios[0].checked = true;
-        arrayDeUsuarios[indiceUsuario].metodoDePago = metodoPagoRadios[0].value;
-    }
-}
+//     // Si no hay ningún método de pago seleccionado, selecciona el primero por defecto
+//     if (!metodoSeleccionado && metodoPagoRadios.length > 0) {
+//         metodoPagoRadios[0].checked = true;
+//         arrayDeUsuarios[indiceUsuario].metodoDePago = metodoPagoRadios[0].value;
+//     }
+// }
 
 function actualizarMetodoDePagoSeleccionado(e) {
     const input = e.target;
@@ -245,7 +281,7 @@ function actualizarMetodoDePagoSeleccionado(e) {
 }
 
 function enviarDatos() {
-    if (contraseniaRespaldo !== null && contraseñaLugar !== null || arrayDeUsuarios[indiceUsuario].metodoDePago !== null && cuponPagoCheked !== false) {
+    if (contraseniaRespaldo !== null && contraseñaLugar !== null || arrayDeUsuarios[indiceUsuario].metodoDePago !== null /*&& uponPagoCheked !== false*/) {
         cambiosPerfil.disabled = false;
     } else {
         cambiosPerfil.disabled = true;
@@ -278,6 +314,7 @@ segundaContraseña.addEventListener("input",verificarContasenia2);
 //         e.preventDefault();
 //     }
 // });
+enviarDatos();
 cambiosPerfil.addEventListener("click",subirDatosActualizadosLocalStorage);
 enviarDatosInput.addEventListener("click",chequearValidacion);
 pagoFacil.addEventListener("change",enviarDatos);
@@ -286,5 +323,8 @@ codigo.addEventListener("input",enviarDatos);
 tarjeta.addEventListener("input",enviarDatos);
 primeraContraseña.addEventListener("input",enviarDatos);
 segundaContraseña.addEventListener("input",enviarDatos);
-
+Array.from(metodoPagoRadios).forEach(metodo=>{
+    metodo.addEventListener("change",validarMetodoDePago);
+  
+})
 
