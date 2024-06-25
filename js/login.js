@@ -12,6 +12,8 @@ let usuarioInciadoSesion="";
 const usuarioInput=document.querySelector("#usuario");
 const contreniaInput=document.querySelector("#contrasenia");
 const confirmarInput=document.querySelector("#confirmar");
+const usuarioError=document.querySelector("#usuarioNoEncontrado");
+const contraseñaError=document.querySelector("#contraseniaError");
 
 let nombreUsuario=null;
 let contrasenia=null;
@@ -24,10 +26,14 @@ function detectarNombre(e){
         usuarioInciadoSesion=usuarioEncontrado;
         nombreUsuario=usuarioEncontrado.nombreDeUsuario;
         console.log(nombreUsuario);
+        usuarioError.classList.remove("errorOn")
+        usuarioError.classList.add("errorOculto")
     }
     else{
         nombreUsuario=null;
         console.log(nombreUsuario);
+        usuarioError.classList.remove("errorOculto")
+        usuarioError.classList.add("errorOn")
     }
 
 }
@@ -36,9 +42,13 @@ function detectarContrasenia(e){
     if(usuarioInciadoSesion.contraseña==input){
         contrasenia=input;
         console.log(contrasenia);
+        contraseñaError.classList.remove("errorOn")
+        contraseñaError.classList.add("errorOculto")
     }else{
         contrasenia=null;
         console.log(contrasenia);
+        contraseñaError.classList.remove("errorOculto")
+        contraseñaError.classList.add("errorOn")
 
     }
 
