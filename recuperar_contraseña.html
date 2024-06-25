@@ -12,12 +12,12 @@
         <img src="img/logo sin fondo recortado.png" alt="" />
       </div>
       <div class="presentacion">
-        <form action="./login.html" method="get" class="formulario_recuperar_contrasenia">
+        <form id="recuperarForm" action="./login.html" method="get" class="formulario_recuperar_contrasenia">
           <label for="email">
             Se le enviara un correo para restablecer la contraseña
           </label>
           <br />
-
+          <label for="">email</label>
           <input
             id="email"
             type="email"
@@ -25,6 +25,7 @@
             placeholder="Ingrese su email"
           />
           <p class="errorOculto" id="errorEmail">email no encontrado</p>
+          <label for="">usuario</label>
           <input
             id="username"
             type="text"
@@ -32,7 +33,7 @@
             placeholder="Ingrese su nombre de usuario"
           />
           <p class="errorOculto" id="errorUsuario">nombre de usuario no encontrado</p>
-          <input href="./login.html" type="submit" class="enviar " id="enviar" disabled />
+          <input type="button" class="enviar" id="enviar" disabled value="enviar email"/>
         </form>
         <div>
           <div class="enlaces">
@@ -43,6 +44,15 @@
         </div>
       </div>
     </div>
+
+    <!-- Modal -->
+    <div id="modalConfirmacion" class="modal">
+      <div class="modal-content">
+        <p>Email enviado</p>
+        <button id="modalOk">OK</button>
+      </div>
+    </div>
+
     <script src="js/recuperarContraseña.js"></script>
   </body>
 </html>
