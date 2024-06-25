@@ -23,11 +23,27 @@ let contraseniaError1=document.querySelector("#contraseniaError")
 const mensajeCupon=document.querySelector("#mensajeCupon");
 let indiceUsuario = arrayDeUsuarios.findIndex(usuario => usuario.nombreDeUsuario === usuarioIinicioSesion.nombreDeUsuario);
 const metodoPagoRadios = document.querySelectorAll('input[name="payment"]');
+const cancelarSuscripcion =document.querySelector(".cancel");
 
 let contraseniaRespaldo=null;
 let contraseñaLugar=null;
 let tarjetaRespaldo=null;
 let digitosRespaldo=null;
+
+function darDeBaja(){
+    for(let i=0;i<arrayDeUsuarios.length;i++){
+        if(arrayDeUsuarios[i].nombreDeUsuario===usuarioIinicioSesion.nombreDeUsuario){
+            arrayDeUsuarios.splice(i, 1); // Elimina el usuario del array
+            localStorage.setItem("usuarios",JSON.stringify(arrayDeUsuarios));
+            localStorage.removeItem("usaurioInicioSesion");
+            usuarioEstado=false;
+            localStorage.setItem("usuarioConetado",JSON.stringify(usuarioEstado));
+            break; // Termina el bucle después de eliminar el usuario
+        }        
+    }
+
+}
+cancelarSuscripcion.addEventListener("click",darDeBaja);
 
 function sacarMensajeAgregar(){
     if(cuponDePagoRadioButon.checked){
