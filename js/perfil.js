@@ -20,7 +20,7 @@ let rapiPago=document.querySelector("#rapipago");
 let cambiosPerfil=document.querySelector("#cambiosPerfil");
 let cifraError=document.querySelector("#cifraError");
 let contraseniaError1=document.querySelector("#contraseniaError")
-
+const mensajeCupon=document.querySelector("#mensajeCupon");
 let indiceUsuario = arrayDeUsuarios.findIndex(usuario => usuario.nombreDeUsuario === usuarioIinicioSesion.nombreDeUsuario);
 const metodoPagoRadios = document.querySelectorAll('input[name="payment"]');
 
@@ -28,6 +28,23 @@ let contraseniaRespaldo=null;
 let contraseñaLugar=null;
 let tarjetaRespaldo=null;
 let digitosRespaldo=null;
+
+function sacarMensajeAgregar(){
+    if(cuponDePagoRadioButon.checked){
+       if(pagoFacil.checked || rapiPago.checked) {
+        mensajeCupon.classList.remove("errorOn");
+        mensajeCupon.classList.add("errorOculto")
+        }
+        else{
+            mensajeCupon.classList.remove("errorOculto");
+            mensajeCupon.classList.add("errorOn")
+        }
+  
+}else{
+    mensajeCupon.classList.remove("errorOn");
+    mensajeCupon.classList.add("errorOculto")
+}
+}
 
 
 function cuponDePago(){
@@ -204,6 +221,14 @@ function validarMetodoDePago(){
             arrayDeUsuarios[indiceUsuario].metodoDePago=tildado.value;
             usuarioIinicioSesion.metodoDePago=tildado.value;
             console.log(arrayDeUsuarios[indiceUsuario].metodoDePago);
+            // if(tildado.value==="coupon"){//metodo q va a mostrar el mensaje
+            //     mensajeCupon.classList.remove("errorOculto")
+            //     mensajeCupon.classList.add("errorOn")
+            // }else{
+            //     mensajeCupon.classList.remove("errorOn")
+            //     mensajeCupon.classList.add("errorOculto")
+            // }
+            sacarMensajeAgregar();
             prenderOApagarCupones();
             break;
         }
@@ -319,6 +344,8 @@ cambiosPerfil.addEventListener("click",subirDatosActualizadosLocalStorage);
 enviarDatosInput.addEventListener("click",chequearValidacion);
 pagoFacil.addEventListener("change",enviarDatos);
 rapiPago.addEventListener("change",enviarDatos);
+pagoFacil.addEventListener("change",sacarMensajeAgregar);
+rapiPago.addEventListener("change",sacarMensajeAgregar);
 codigo.addEventListener("input",enviarDatos);
 tarjeta.addEventListener("input",enviarDatos);
 primeraContraseña.addEventListener("input",enviarDatos);

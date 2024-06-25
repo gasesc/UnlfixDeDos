@@ -22,9 +22,9 @@
                 <div class="readonly-field" id="email">mail@example.com</div>
                 <div class="readonly-field">********</div>
                 <input type="password" class="input-field" placeholder="Nueva contraseña" id="primeraContraseña">
-                <p class="errorOculto" id="contraseniaError">digite una contraseña correcto</p>
+                <p class="errorOculto" id="contraseniaError">digite una contraseña correcta la contraseña admite 8 caracteres ( mínimo 2 letras, 2 números y 2 caracteres especiales)</p>
                 <input type="password" class="input-field" placeholder="Repita contraseña" id="segundaContraseña">
-                <p class="errorOculto" id="contrasenia2Error">digite una contraseña correcto</p>
+                <p class="errorOculto" id="contrasenia2Error">las contraseñas no coiciden</p>
             </div>
             <div class="column">
                 <label>Método de pago</label>
@@ -32,18 +32,25 @@
                     <label><input type="radio" name="payment" value="credit-card"> Tarjeta de crédito</label>
                     <input type="text" placeholder="Número de tarjeta" id="tarjeta">
                     <input type="text" placeholder="XXX" id="codigo">
-                    <p class="errorOculto" id="tarjetaError">digite un numero de tarjeta correcto</p>
+                    <p class="errorOculto" id="tarjetaError">digite un numero de tarjeta correcta a tarjeta de crédito solo acepta números con una longitud de entre 16
+                        y 19 dígitos.
+                        El último número de la tarjeta debe ser par si la suma de todos los números
+                        anteriores (el último no cuenta) es un número impar.
+                        El último número de la tarjeta debe ser impar si la suma de todos los
+                        números anteriores (el último no cuenta) es un número par.
+                        </p>
                     <p class="errorOculto" id="cifraError">digite 3 digitos distintos de cero</p>
 
                     <label><input type="radio" name="payment" value="coupon" id="cuponesDePago"> Cupón de pago</label>
                     <label><input type="checkbox" name="coupon-method" value="1" id="pagoFacil" disabled> Pago Fácil</label>
                     <label><input type="checkbox" name="coupon-method" value="2" id="rapipago" disabled> Rapi Pago</label>
-
+                    <p class="errorOculto" id="mensajeCupon">por favor selecciona un cupon de pago</p>
                     <label><input type="radio" name="payment" value="bank-transfer"> Transferencia bancaria</label>
                     <div class="cbu">CBU: 1234567890123456789012</div>
                 </div>
             </div>
         </div>
+        <p class="errorOculto">los campos de contraseña tienen q estar completos o selecionar un metodo de pago</p>
         <div class="row buttons">
             <a href="pantalla_principal.html" class="save" id="enviarDatos" ><input class="save" type="submit" value="Guardar Cambios" id="cambiosPerfil" disabled/></a>
             <a href="login.html" class="cancel" >Cancelar suscripción</a>
