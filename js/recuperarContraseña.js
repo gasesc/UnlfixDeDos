@@ -34,12 +34,12 @@ function validarUsuario(e) {
         if (arrayDeUsuarios[indiceUsuario].nombreDeUsuario === inputUsuario) {
             errorUsuario.classList.remove("errorOn");
             errorUsuario.classList.add("errorOculto");
-            console.log(arrayDeUsuarios[indiceUsuario].nombreDeUsuario);
+            // console.log(arrayDeUsuarios[indiceUsuario].nombreDeUsuario);
             usuarioEncontrado = true;
         } else {
             errorUsuario.classList.remove("errorOculto");
             errorUsuario.classList.add("errorOn");
-            console.log("no encuentro nada");
+            //console.log("no encuentro nada");
             usuarioEncontrado = false;
         }
     }

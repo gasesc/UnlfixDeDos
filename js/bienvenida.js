@@ -9,9 +9,9 @@ function initializeUsers() {
         // Si no existe, crea un array vacío y guárdalo en el localStorage
         const usuariosArray = [];
         localStorage.setItem(USUARIOS, JSON.stringify(usuariosArray));
-        console.log('Array de usuarios creado en el localStorage.');
+        // console.log('Array de usuarios creado en el localStorage.');
     } else {
-        console.log('El array de usuarios ya existe en el localStorage.');
+        // console.log('El array de usuarios ya existe en el localStorage.');
     }
 }
 initializeUsers();

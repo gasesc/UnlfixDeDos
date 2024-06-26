@@ -102,6 +102,15 @@ input{
     transition:  font-weigh 0.3s; 
     
 }
+.errorOculto{
+    display: none;
+    color: red;
+    
+  }
+  .errorOn{
+    display: block;
+    color: red;
+  }
 
 
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */

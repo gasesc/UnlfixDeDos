@@ -13,11 +13,11 @@
             <form action="./pantalla_principal.html" method="get" class="formulario_logueo" enctype="multipart/form-data">
                 <label for="usuario">Nombre de usuario</label>
                 <input id="usuario" type="text" name="usuario" placeholder="Ingrese su usuario" >
-                
+                <p class="errorOculto" id="usuarioNoEncontrado">no coincide con un usuario registrado</p>
                 <label for="contrasenia">Contraseña</label>
                 <input id="contrasenia" type="password" name="contrasenia" placeholder="Ingrese su contraseña">
-                
-                <input href="./pantalla_principal.html" type="submit" class="enviar"  id="confirmar" disabled>
+                <p class="errorOculto" id="contraseniaError">la contraseña no coincide</p>
+                <input href="./pantalla_principal.html" type="submit" class="enviar"  id="confirmar" value="iniciar Sesion" disabled>
             </form>          
         </div>
         <div class="enlaces">

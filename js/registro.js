@@ -60,12 +60,12 @@ function verificarNombre(e) {
         nombreError.classList.remove("errorOculto");
         nombreError.classList.add("errorOn");
         usuario.nombre=null;
-        console.log(usuario.nombre);
+        // console.log(usuario.nombre);
     }else{
         nombreError.classList.remove("errorOn");
         nombreError.classList.add("errorOculto");
         usuario.nombre=input.value;
-        console.log(usuario.nombre);
+        // console.log(usuario.nombre);
     }
 }
 function verificarApellido(e) {
@@ -76,12 +76,12 @@ function verificarApellido(e) {
         apellidoError.classList.remove("errorOculto");
         apellidoError.classList.add("errorOn");
         usuario.apellido=null;
-        console.log(usuario.apellido);
+        // console.log(usuario.apellido);
     }else{
         apellidoError.classList.remove("errorOn");
         apellidoError.classList.add("errorOculto");
         usuario.apellido=input.value;
-        console.log(usuario.apellido);
+        // console.log(usuario.apellido);
     }
 }
 
@@ -93,13 +93,13 @@ function verificarCorreo(e){
         emailError.classList.remove("errorOculto");
         emailError.classList.add("errorOn");
         usuario.email=null;
-        console.log(usuario.email)
+        // console.log(usuario.email)
     }
     else{
         emailError.classList.remove("errorOn");
         emailError.classList.add("errorOculto");
         usuario.email=input.value;
-        console.log(usuario.email);
+        // console.log(usuario.email);
 
     }
 }
@@ -110,13 +110,13 @@ function verificarUsuario(e){
         usuarioError.classList.remove("errorOculto");
         usuarioError.classList.add("errorOn");
         usuario.nombreDeUsuario=null;
-        console.log(usuario.nombreDeUsuario);
+        // console.log(usuario.nombreDeUsuario);
     }
     else{
         usuarioError.classList.remove("errorOn");
         usuarioError.classList.add("errorOculto");
         usuario.nombreDeUsuario=input.value;
-        console.log(usuario.nombreDeUsuario);
+        // console.log(usuario.nombreDeUsuario);
     }
 
 }
@@ -126,12 +126,12 @@ function verificarContasenia(e){
     if(!regexContraseña.test(input)){
         contraseniaError1.classList.remove("errorOculto");
         contraseniaError1.classList.add("errorOn")
-        console.log("no cumple con los caracteres");
+        // console.log("no cumple con los caracteres");
     }else{
         contraseniaError1.classList.remove("errorOn");
         contraseniaError1.classList.add("errorOculto")
         contraseniaRespaldo=input;
-        console.log(contraseniaRespaldo);
+        // console.log(contraseniaRespaldo);
     }
 
     
@@ -145,13 +145,13 @@ function verificarContasenia2(e){
         contraseniaError.classList.remove("errorOn");
         contraseniaError.classList.add("errorOculto");
         usuario.contraseña=input.value;
-        console.log(usuario.contraseña);
+        // console.log(usuario.contraseña);
     }
     else{
         contraseniaError.classList.remove("errorOculto");
         contraseniaError.classList.add("errorOn");
         usuario.contraseña=null;
-        console.log(usuario.contraseña);
+        // console.log(usuario.contraseña);
     }
 }
 
@@ -165,7 +165,7 @@ function verificarTarjeta(e) {
         tarjetaError.classList.remove("errorOculto");
         tarjetaError.classList.add("errorOn");
         usuario.tarjeta = null;
-        console.log(usuario.tarjeta);
+        // console.log(usuario.tarjeta);
     } else {
         const arrayNumeros = input.split('').map(Number);
         
@@ -179,17 +179,17 @@ function verificarTarjeta(e) {
             tarjetaError.classList.remove("errorOn");
             tarjetaError.classList.add("errorOculto");
             usuario.tarjeta = input;
-            console.log(usuario.tarjeta);
+            // console.log(usuario.tarjeta);
         } else if (suma % 2 === 0 && (arrayNumeros.length - 1) % 2 !== 0) {
             tarjetaError.classList.remove("errorOn");
             tarjetaError.classList.add("errorOculto");
             usuario.tarjeta = input;
-            console.log(usuario.tarjeta);
+            // console.log(usuario.tarjeta);
         } else {
             tarjetaError.classList.remove("errorOculto");
             tarjetaError.classList.add("errorOn");
             usuario.tarjeta = null;
-            console.log(usuario.tarjeta);
+            // console.log(usuario.tarjeta);
         }
     }
 }
@@ -199,7 +199,7 @@ function validarMetodoDePago(){
     for( const tildado of input){
         if(tildado.checked){
             usuario.metodoDePago=tildado.value;
-            console.log(usuario.metodoDePago);
+            // console.log(usuario.metodoDePago);
             prenderOApagarCupones();
             break;
         }
@@ -224,14 +224,14 @@ function guardarCuponDePago(e) {
         } else {
             usuario.pagoFacil = "";
         }
-        console.log(usuario.pagoFacil);
+        // console.log(usuario.pagoFacil);
     } else if (input.id === "rapipago") {
         if (input.checked) {
             usuario.rapiPago = input.value;
         } else {
             usuario.rapiPago = "";
         }
-        console.log(usuario.rapiPago);
+        // console.log(usuario.rapiPago);
     }
 }
 function verificarDigitos(e){
@@ -240,18 +240,18 @@ function verificarDigitos(e){
     if(arrayNumeros.length===3){
         if(arrayNumeros[0]===0 && arrayNumeros[1]===0 && arrayNumeros[2]===0){
             usuario.tresDigitos=null;
-            console.log(usuario.tresDigitos)
+            // console.log(usuario.tresDigitos)
             cifraError.classList.remove("errorOculto");
             cifraError.classList.add("errorOn");
         }else{
             usuario.tresDigitos=input;
-            console.log(usuario.tresDigitos)
+            // console.log(usuario.tresDigitos)
             cifraError.classList.remove("errorOn");
             cifraError.classList.add("errorOculto");
         }
         
     }else{
-        console.log("digite un numero valido")
+        // console.log("digite un numero valido")
         cifraError.classList.remove("errorOculto");
         cifraError.classList.add("errorOn");
     }
