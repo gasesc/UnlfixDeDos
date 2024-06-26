@@ -141,15 +141,21 @@ main{
     
 } 
 
-.peliculas_recomendadas img{
+/* .peliculas_recomendadas img{
     width:100%;
     height: 100%;
     border-radius: 10px;
     border:2px solid #260028;
     transition: transform 0.3s ease;
     /* width: 100%;
-    height: 100%; */
-} 
+    height: 100%;
+}  */
+
+.img-vista-pelicula-recomendada {
+    max-width: 100%;
+    max-height: 100%;
+}
+
 .peliculas_recomendadas img:hover{
     transform: scale(1.05);
 }
@@ -342,9 +348,9 @@ h2{
         height: 45%;
         margin-top: 5px;
     } 
-    .peliculas_recomendadas img{
+    /* .peliculas_recomendadas img{
         width: 80%;
-    }
+    } */
      .contenedor_nav span{
         display: inline;
     } 
