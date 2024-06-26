@@ -237,6 +237,13 @@ ul li a:hover{
     font-size: 18px;
     color: #FF0000; /* Rojo para destacar */
 }
+.no-results {
+    display: none; /* Inicialmente oculto */
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #FF0000; /* Rojo para destacar */
+  }
 
 
 /********************* Inicio Mobile *********************/
