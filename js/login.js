@@ -25,13 +25,13 @@ function detectarNombre(e){
     if(usuarioEncontrado!==undefined){
         usuarioInciadoSesion=usuarioEncontrado;
         nombreUsuario=usuarioEncontrado.nombreDeUsuario;
-        console.log(nombreUsuario);
+        // console.log(nombreUsuario);
         usuarioError.classList.remove("errorOn")
         usuarioError.classList.add("errorOculto")
     }
     else{
         nombreUsuario=null;
-        console.log(nombreUsuario);
+        // console.log(nombreUsuario);
         usuarioError.classList.remove("errorOculto")
         usuarioError.classList.add("errorOn")
     }
@@ -41,12 +41,12 @@ function detectarContrasenia(e){
     let input=e.target.value;
     if(usuarioInciadoSesion.contraseña==input){
         contrasenia=input;
-        console.log(contrasenia);
+        // console.log(contrasenia);
         contraseñaError.classList.remove("errorOn")
         contraseñaError.classList.add("errorOculto")
     }else{
         contrasenia=null;
-        console.log(contrasenia);
+        // console.log(contrasenia);
         contraseñaError.classList.remove("errorOculto")
         contraseñaError.classList.add("errorOn")
 
