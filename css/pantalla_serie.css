@@ -101,7 +101,7 @@ main{
     background-repeat:no-repeat ;
     background-size:cover;
     background-position:  top center;
-}
+}*/
 .contenedor1{
     grid-area: contenedor1;
     /* background-repeat:no-repeat ;
@@ -177,9 +177,9 @@ h1{
     font-size: 32px;
 }
 p {
-    margin-top: 9px;
+    margin-top: 20px;
     color: #333; 
-    font-size: 15px;
+    font-size: 15;
     font-family: Arial, sans-serif; 
     line-height: 1.5; 
     /* padding: 10px;  */
