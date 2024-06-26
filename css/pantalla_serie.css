@@ -179,7 +179,7 @@ h1{
 p {
     margin-top: 9px;
     color: #333; 
-    font-size: 15px;
+    font-size: 9px;
     font-family: Arial, sans-serif; 
     line-height: 1.5; 
     /* padding: 10px;  */
@@ -311,7 +311,7 @@ html, body {
         display: block;
     }
     p{
-        font-size: 10px;
+        font-size: 9px;
     }
     
 }
