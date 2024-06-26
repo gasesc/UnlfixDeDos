@@ -11,10 +11,25 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     />
-
+    <!--OWL CAROUSEL CSS-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- <link rel="stylesheet" href="slick-1.8.1/slick/slick.css">
     <link rel="stylesheet" href="slick-1.8.1/slick/slick-theme.css"> -->
     <link rel="stylesheet" href="./css/pantalla_pelicula.css" />
+    <!-- TINY SLIDER -->
     <title>Document</title>
   </head>
   <body>
@@ -42,10 +57,7 @@
               </a>
             </li>
             <li class="contenedor_nav">
-              <a
-                href="pantalla_principal.html#peliculas"
-                class="botoncambiado"
-              >
+              <a href="pantalla_principal.html#peliculas" class="botoncambiado">
                 <span class="logoBar"
                   ><i class="fa-sharp fa-solid fa-film iconitos"></i
                 ></span>
@@ -88,50 +100,76 @@
 
       <section class="contenedor2">
         <h2>Peliculas Recomendadas</h2>
-        <div class="gran_contenedor">
-            <div class="peliculas_recomendadas">
-                <a href="#" data-id="1" onclick="mostrarDetalleSerie(this)">
-                    <img src="img/PeliYSeries/shogun.jpg" alt="">
-                </a>
-            </div>
-            <div class="peliculas_recomendadas">
-                <a href="detalle.html" data-id="2" onclick="mostrarDetalleSerie(this)">
-                    <img src="img/PeliYSeries/rick y morty.jpg" alt="">
-                </a>
-            </div>
-            <div class="peliculas_recomendadas">
-                <a href="detalle.html" data-id="3" onclick="mostrarDetalleSerie(this)">
-                    <img src="img/PeliYSeries/los simpsons.webp" alt="">
-                </a>
-            </div>
-            <div class="peliculas_recomendadas">
-                <a href="detalle.html" data-id="4" onclick="mostrarDetalleSerie(this)">
-                    <img src="img/PeliYSeries/continental.webp" alt="">
-                </a>
-            </div>
-            <div class="peliculas_recomendadas">
-                <a href="detalle.html" data-id="5" onclick="mostrarDetalleSerie(this)">
-                    <img src="img/PeliYSeries/twd.jpg" alt="">
-                </a>
-            </div>
-            <div class="peliculas_recomendadas">
-                <a href="detalle.html" data-id="6" onclick="mostrarDetalleSerie(this)">
-                    <img src="img/PeliYSeries/invencible.jpg" alt="">
-                </a>
-            </div>
-            <div class="peliculas_recomendadas">
-                <a href="detalle.html" data-id="7" onclick="mostrarDetalleSerie(this)">
-                    <img src="img/PeliYSeries/fallout.webp" alt="">
-                </a>
-            </div>
-            <div class="peliculas_recomendadas">
-                <a href="detalle.html" data-id="8" onclick="mostrarDetalleSerie(this)">
-                    <img src="img/PeliYSeries/xmen.png" alt="">
-                </a>
-            </div>
+        <div class="owl-carousel owl-theme gran_contenedor">
+          <div class="peliculas_recomendadas">
+            <a href="#" data-id="1" onclick="mostrarDetallePelicula(this)">
+              <div class="contenedor-img-vista-pelicula-recomendada">
+                <img
+                  class="img-vista-pelicula-recomendada"
+                  src="img/PeliYSeries/shogun.jpg"
+                  alt=""
+                />
+              </div>
+            </a>
+          </div>
+          <div class="peliculas_recomendadas">
+            <a href="#" data-id="2" onclick="mostrarDetallePelicula(this)">
+              <div class="contenedor-img-vista-pelicula-recomendada">
+                <img
+                  class="img-vista-pelicula-recomendada"
+                  src="img/PeliYSeries/shogun.jpg"
+                  alt=""
+                />
+              </div>
+            </a>
+          </div>
+          <div class="peliculas_recomendadas">
+            <a href="#" data-id="3" onclick="mostrarDetallePelicula(this)">
+              <div class="contenedor-img-vista-pelicula-recomendada">
+                <img
+                  class="img-vista-pelicula-recomendada"
+                  src="img/PeliYSeries/shogun.jpg"
+                  alt=""
+                />
+              </div>
+            </a>
+          </div>
+          <div class="peliculas_recomendadas">
+            <a href="#" data-id="4" onclick="mostrarDetallePelicula(this)">
+              <div class="contenedor-img-vista-pelicula-recomendada">
+                <img
+                  class="img-vista-pelicula-recomendada"
+                  src="img/PeliYSeries/shogun.jpg"
+                  alt=""
+                />
+              </div>
+            </a>
+          </div>
+          <div class="peliculas_recomendadas">
+            <a href="#" data-id="5" onclick="mostrarDetallePelicula(this)">
+              <div class="contenedor-img-vista-pelicula-recomendada">
+                <img
+                  class="img-vista-pelicula-recomendada"
+                  src="img/PeliYSeries/shogun.jpg"
+                  alt=""
+                />
+              </div>
+            </a>
+          </div>
+          <div class="peliculas_recomendadas">
+            <a href="#" data-id="6" onclick="mostrarDetallePelicula(this)">
+              <div class="contenedor-img-vista-pelicula-recomendada">
+                <img
+                  class="img-vista-pelicula-recomendada"
+                  src="img/PeliYSeries/shogun.jpg"
+                  alt=""
+                />
+              </div>
+            </a>
+          </div>
         </div>
-    </section>
-</main>
+      </section>
+    </main>
 
     <!-- <script src=" http://code.jquery.com/jquery-latest.js"></script>
     <script src="slick-1.8.1/slick/slick.min.js"></script>
@@ -180,7 +218,41 @@
       </script>
    -->
     <script src="./js/vista_pelicula.js"></script>
-    <script src = "./js/pantalla_principal.js"></script>
+    <script src="./js/pantalla_principal.js"></script>
     <script src="js/cerrarSesion.js"></script>
+    <!-- JQUERY-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- OWL CAROUSEL -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+          loop: true,
+          margin: 10,
+          nav: true,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            600: {
+              items: 3,
+            },
+            1000: {
+              items: 3,
+            },
+          },
+        });
+      });
+    </script>
   </body>
 </html>
