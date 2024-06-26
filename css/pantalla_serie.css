@@ -337,9 +337,9 @@ html, body {
     .descripcion_pelicula{
         width: 50%;
     }
-    .descripcion_pelicula p{
+    /* .descripcion_pelicula p{
         font-size: 15px;
-    }
+    } */
     .gran_contenedor{
         width: 90%;
         margin: auto;
