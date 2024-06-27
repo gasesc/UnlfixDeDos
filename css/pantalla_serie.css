@@ -315,7 +315,7 @@ html, body {
         display: block;
     }
     p{
-        font-size: 9px;
+        font-size: 10px;
     }
     
 }
@@ -403,6 +403,9 @@ html, body {
     .peliculas_recomendadas img{
         width: 100%;
     } */
+     p{
+        font-size: 10px;
+     }
 }
 @media screen and (min-width: 1600px){
     p{
