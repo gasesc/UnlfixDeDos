@@ -179,7 +179,7 @@ h1{
 p {
     margin-top: 20px;
     color: #333; 
-    font-size: 15;
+    font-size: 14px;
     font-family: Arial, sans-serif; 
     line-height: 1.5; 
     /* padding: 10px;  */
@@ -403,4 +403,10 @@ html, body {
     .peliculas_recomendadas img{
         width: 100%;
     } */
+}
+@media screen and (min-width: 1600px){
+    p{
+        font-size: 15px;
+    }
+
 }

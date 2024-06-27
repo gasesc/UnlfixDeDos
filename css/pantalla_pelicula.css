@@ -194,7 +194,7 @@ h1{
 p {
     margin-top: 9px;
     color: #333; 
-    font-size: 15px; 
+    font-size: 14px; 
     font-family: Arial, sans-serif; 
     line-height: 1.5; 
     /* padding: 10px;  */
@@ -407,4 +407,11 @@ h2{
     height: 50%;
     margin-top: 5px;
 }
+}
+
+@media screen and (min-width: 1600px){
+    p{
+        font-size: 15px;
+    }
+
 }
