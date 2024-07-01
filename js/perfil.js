@@ -164,7 +164,7 @@ function verificarContasenia2(e){
 
 
 
-function verificarTarjeta(e) {
+/*function verificarTarjeta(e) {
     const regexTarjeta = /^\d{16,19}$/;
     const input = e.target.value;
     let suma = 0;
@@ -200,6 +200,42 @@ function verificarTarjeta(e) {
             tarjetaError.classList.remove("errorOculto");
             tarjetaError.classList.add("errorOn");
             // console.log( arrayDeUsuarios[indiceUsuario].tarjeta);
+        }
+    }
+}*/
+function verificarTarjeta(e) {
+    const regexTarjeta = /^\d{16,19}$/;
+    const input = e.target.value;
+    let suma = 0;
+
+    // Verificar si el input cumple con el regex
+    if (!regexTarjeta.test(input)) {
+        tarjetaError.classList.remove("errorOculto");
+        tarjetaError.classList.add("errorOn");
+        usuario.tarjeta = null;
+        // console.log(usuario.tarjeta);
+    } else {
+        const arrayNumeros = input.split('').map(Number);
+
+        // Sumar todos los números excepto el último
+        for (let i = 0; i < arrayNumeros.length - 1; i++) {
+            suma += arrayNumeros[i];
+        }
+
+        // Obtener el último número
+        const ultimoNumero = arrayNumeros[arrayNumeros.length - 1];
+        
+        // Verificar las condiciones de paridad
+        if ((suma % 2 === 0 && ultimoNumero % 2 !== 0) || (suma % 2 !== 0 && ultimoNumero % 2 === 0)) {
+            tarjetaError.classList.remove("errorOn");
+            tarjetaError.classList.add("errorOculto");
+            usuario.tarjeta = input;
+            // console.log(usuario.tarjeta);
+        } else {
+            tarjetaError.classList.remove("errorOculto");
+            tarjetaError.classList.add("errorOn");
+            usuario.tarjeta = null;
+            // console.log(usuario.tarjeta);
         }
     }
 }
